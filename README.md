@@ -51,7 +51,7 @@ gives the following result:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/legacy-trust-api-ruby.
+Bug reports and pull requests are welcome on GitHub at https://github.com/BankToTheFuture/legacy-trust-api-ruby.
 
 ## License
 

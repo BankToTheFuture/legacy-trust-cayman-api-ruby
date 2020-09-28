@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['CLIENT_ID']&client_secret=config_env['CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Sep 2020 16:59:19 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1324'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDEwNTMxNTksImV4cCI6MTYwMTA1Njc1OSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.Uf7F8KoEk7c3ePNY3k6Xaq9MnU_Ive5Vq-Wwn3B5m7MFn1J4O5xWtnxdIAWQVCg-98QaTHklnEykuup6MAkkCD1EqNzo-JDu2pvTjLvbFdu8wHD1mgcr9tA_BNjbqLeUitsPz5ja_zAueQvuhWsfCwEZPY9SMSRlPEc4CStgMll6plJ6vVC5wxYAAaLpMsaXrgW5COJ8aNKIgqEVMBmRFfhQl3GfYywFduzVdcbChScRLLNJmf-zlmaX6vWoHs4tfX813py5dNEvzF2AlfCsDVAKtzqvr9FHcHac0SaQ2tlM3oapXqsXPMEhhWPNKQI5TDVVUGesVzjyAN8THi955OG_smbVp-jwPYr_pnhMBKt8-1Wg5nKvF4qsC_6oIY1iemMxeQotfEn5ZXxqutj1WXt1EiSGfocv9C7QQRxzOEjnD8gpNGVxe3mJNF0sjI_XxfSmbnHs43KKFwaUe8k2axxCQdwFvMEqpWTMvtdVJ5vi4EgGQAbXn0w0wCdnsuI_685lpZE8kkd1rr6hsWXK0FyecXB_b81oYR0vG1-QBI6-v0yBVAQe4OVgyxdcpMQqlhLpoOuswzFy6zxbrAFR-yERsS7gS8hmqR3kiYJshVLVF9mbxWzJ-uGiHKagpMCYjb-gZX1qcMbPr-KSl12wG_U8VA_XVMWKV9CIxYsag4c","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Fri, 25 Sep 2020 16:59:19 GMT
+- request:
+    method: get
+    uri: https://partner-api.smarttrust.welton.ee/currencies
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDEwNTMxNTksImV4cCI6MTYwMTA1Njc1OSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.Uf7F8KoEk7c3ePNY3k6Xaq9MnU_Ive5Vq-Wwn3B5m7MFn1J4O5xWtnxdIAWQVCg-98QaTHklnEykuup6MAkkCD1EqNzo-JDu2pvTjLvbFdu8wHD1mgcr9tA_BNjbqLeUitsPz5ja_zAueQvuhWsfCwEZPY9SMSRlPEc4CStgMll6plJ6vVC5wxYAAaLpMsaXrgW5COJ8aNKIgqEVMBmRFfhQl3GfYywFduzVdcbChScRLLNJmf-zlmaX6vWoHs4tfX813py5dNEvzF2AlfCsDVAKtzqvr9FHcHac0SaQ2tlM3oapXqsXPMEhhWPNKQI5TDVVUGesVzjyAN8THi955OG_smbVp-jwPYr_pnhMBKt8-1Wg5nKvF4qsC_6oIY1iemMxeQotfEn5ZXxqutj1WXt1EiSGfocv9C7QQRxzOEjnD8gpNGVxe3mJNF0sjI_XxfSmbnHs43KKFwaUe8k2axxCQdwFvMEqpWTMvtdVJ5vi4EgGQAbXn0w0wCdnsuI_685lpZE8kkd1rr6hsWXK0FyecXB_b81oYR0vG1-QBI6-v0yBVAQe4OVgyxdcpMQqlhLpoOuswzFy6zxbrAFR-yERsS7gS8hmqR3kiYJshVLVF9mbxWzJ-uGiHKagpMCYjb-gZX1qcMbPr-KSl12wG_U8VA_XVMWKV9CIxYsag4c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Sep 2020 16:59:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"symbol":"AUD","name":"Australian Dollar","class":"Fiat","decimalPlaces":2},{"symbol":"BTC","name":"Bitcoin","class":"Crypto","decimalPlaces":8},{"symbol":"CAD","name":"Canadian
+        Dollar","class":"Fiat","decimalPlaces":2},{"symbol":"ETH","name":"Etherium","class":"Crypto","decimalPlaces":8},{"symbol":"EUR","name":"Euro","class":"Fiat","decimalPlaces":2},{"symbol":"GBP","name":"Pound
+        sterling","class":"Fiat","decimalPlaces":2},{"symbol":"HKD","name":"HK Dollar","class":"Fiat","decimalPlaces":2},{"symbol":"QWE","name":"FFFgrgrgrgf
+        hth","class":"Securities","decimalPlaces":2},{"symbol":"REAT","name":"Real
+        Estate Token One","class":"Crypto","decimalPlaces":8},{"symbol":"TYTYYY","name":"ttyjnljnlnknjjk
+        jk kj lj jk j k l ","class":"Fiat","decimalPlaces":2},{"symbol":"USD","name":"US
+        Dollar","class":"Fiat","decimalPlaces":2}]'
+  recorded_at: Fri, 25 Sep 2020 16:59:19 GMT
+recorded_with: VCR 6.0.0
