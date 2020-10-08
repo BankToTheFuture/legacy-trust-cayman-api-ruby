@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:32:21 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1317'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3NDEsImV4cCI6MTYwMjE2MDM0MSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.f80gbX1phqpPOgjWoY-W_dm4s1LvSNuMBAILgeBL0xVNj-E2tE2w4BWlI6pBQXvTCnl2lD-UpQBm7DRBpqsdRdD_las5XnvUDWQtv7xZVFiEmbccF5bUnxxYBAhaZzzzg8Hs4FTmOhIeeUu8aWWE3bMu4tbNM9UtppkWhtbPBg_5cNvXGvXiQv8ffoKobzxasR15ungu9uNJVwaAZpF7YXRT_jvrWQIYxcNJzhE0qtPCzceP2config_env[''GLOBAL_CLIENT_ID'']BlnPLfaPq3A6Xm14keGtMrJktUKRt6Q2WZ3CO60p055uDHF7zZUBMsctyvrtnMekNfjPcrWSvPm4veba-6NhRnp9OmoGSYUHu0KlAIzw9afoGoKttKe3ST-y-_4rtBB6B--C0MKMZ1uxCnJCk8SSX79u1JmjGKiG-0Ah7mjvimzityMbiz9M3Fp2q3LFJMul9l13tryGc1k4PLj3R8jTgSlYNEx-gq5IyWgdlPtw12g1vhp4bcVWvZQ9GD_jUVFKmoKCGGJP4IathF-O-nuf8fIh0ZWia-hJpQDoXwQLZRPRgVkbPFQlSUNGtEGt8y9NAINWKCJMycmDboAPUebslSTFYxJDPxKNRPLNkP7Bo9C1JgwRSatTH4oUTVieyconfig_env[''GLOBAL_SERVICE_ACCOUNT_ID'']ZBfR8xcCU6755N-Ir2LqBOmY9WEpHqgaIOyXGqeuewc7B9d2FLDJ7Xwt0","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Thu, 08 Oct 2020 11:32:21 GMT
+- request:
+    method: get
+    uri: https://partner-api.smarttrust.welton.ee/banks/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Clientid:
+      - config_env['GLOBAL_CLIENT_ID']
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3NDEsImV4cCI6MTYwMjE2MDM0MSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.f80gbX1phqpPOgjWoY-W_dm4s1LvSNuMBAILgeBL0xVNj-E2tE2w4BWlI6pBQXvTCnl2lD-UpQBm7DRBpqsdRdD_las5XnvUDWQtv7xZVFiEmbccF5bUnxxYBAhaZzzzg8Hs4FTmOhIeeUu8aWWE3bMu4tbNM9UtppkWhtbPBg_5cNvXGvXiQv8ffoKobzxasR15ungu9uNJVwaAZpF7YXRT_jvrWQIYxcNJzhE0qtPCzceP2config_env['GLOBAL_CLIENT_ID']BlnPLfaPq3A6Xm14keGtMrJktUKRt6Q2WZ3CO60p055uDHF7zZUBMsctyvrtnMekNfjPcrWSvPm4veba-6NhRnp9OmoGSYUHu0KlAIzw9afoGoKttKe3ST-y-_4rtBB6B--C0MKMZ1uxCnJCk8SSX79u1JmjGKiG-0Ah7mjvimzityMbiz9M3Fp2q3LFJMul9l13tryGc1k4PLj3R8jTgSlYNEx-gq5IyWgdlPtw12g1vhp4bcVWvZQ9GD_jUVFKmoKCGGJP4IathF-O-nuf8fIh0ZWia-hJpQDoXwQLZRPRgVkbPFQlSUNGtEGt8y9NAINWKCJMycmDboAPUebslSTFYxJDPxKNRPLNkP7Bo9C1JgwRSatTH4oUTVieyconfig_env['GLOBAL_SERVICE_ACCOUNT_ID']ZBfR8xcCU6755N-Ir2LqBOmY9WEpHqgaIOyXGqeuewc7B9d2FLDJ7Xwt0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:32:21 GMT
+      Content-Type:
+      - application/problem+json; charset=utf-8
+      Content-Length:
+      - '226'
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One
+        or more validation errors occurred.","status":400,"traceId":"|6befc2e6-415d19ee9fece280.","errors":{"":["Please
+        provide eithe bank name or swift code"]}}'
+  recorded_at: Thu, 08 Oct 2020 11:32:21 GMT
+recorded_with: VCR 6.0.0

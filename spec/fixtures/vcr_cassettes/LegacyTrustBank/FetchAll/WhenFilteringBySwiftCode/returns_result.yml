@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:31:43 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1320'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3MDMsImV4cCI6MTYwMjE2MDMwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.ZuB5pJguSifhn3kK_epyFbtMbVrdjCSOm49Ivsed_T1DWrTgGufOaMiO8NYkRZSyLrEewjPHQ9e1480yJzTCkQdG_oACw6EeAzmKsWPDHNBYjdTLszf6rMrz4pVawBvRR7T-sSmKtVzvv1mOlv-9kZWunjCbnBQYOHaupO6b5N2wgMxaCAQm5pE5Cm2GEh_KZRGTKYqIMPv8hXBV0cPosotqRuzHrmGXHIVepGfsR0L63yUivQeR0Xge-JWQJb_J2TtFc6XSTOz2WVkyoXsePS0TtbvsLv-hDSZoHlAx9GvJc8zULZSlYcXQaQ2vBpXLKWmq9C2pDjnEvAeinqh5K_vAEr5snUacKXa_iBg7FQoNK6Eu41SzZFQ88EQVfZr6Ui7F7GFWlmmHA3b42j9Gxb8vUAE9FX1JlQMHk1Mvr8gGDv-BAmrEchlULkI-HeKcCEnPtHNBYWy7DdkNEBvhpWvZApWRWBH45ntvgvOxXL-9Ars5n2teNEMiDW6Ps6TYydVaLHXDVtaFH2Oraz-0wvQ39FlVHizNuI9wu3nRE0gMC5ur9LRS1xWzbAC5h0aeRV0KtbJfye3wwokKIHrVGzuuIJy_xUUmA6dHd61qPOGaBZBHWdsXBcrz7E5E7tcga9WxRkx-D4EvBpnjc6NAreSeY9yv2NDBaPCGafGhFms","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Thu, 08 Oct 2020 11:31:43 GMT
+- request:
+    method: get
+    uri: https://partner-api.smarttrust.welton.ee/banks/search?swiftCode=BREXPLPWMBK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Clientid:
+      - config_env['GLOBAL_CLIENT_ID']
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3MDMsImV4cCI6MTYwMjE2MDMwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.ZuB5pJguSifhn3kK_epyFbtMbVrdjCSOm49Ivsed_T1DWrTgGufOaMiO8NYkRZSyLrEewjPHQ9e1480yJzTCkQdG_oACw6EeAzmKsWPDHNBYjdTLszf6rMrz4pVawBvRR7T-sSmKtVzvv1mOlv-9kZWunjCbnBQYOHaupO6b5N2wgMxaCAQm5pE5Cm2GEh_KZRGTKYqIMPv8hXBV0cPosotqRuzHrmGXHIVepGfsR0L63yUivQeR0Xge-JWQJb_J2TtFc6XSTOz2WVkyoXsePS0TtbvsLv-hDSZoHlAx9GvJc8zULZSlYcXQaQ2vBpXLKWmq9C2pDjnEvAeinqh5K_vAEr5snUacKXa_iBg7FQoNK6Eu41SzZFQ88EQVfZr6Ui7F7GFWlmmHA3b42j9Gxb8vUAE9FX1JlQMHk1Mvr8gGDv-BAmrEchlULkI-HeKcCEnPtHNBYWy7DdkNEBvhpWvZApWRWBH45ntvgvOxXL-9Ars5n2teNEMiDW6Ps6TYydVaLHXDVtaFH2Oraz-0wvQ39FlVHizNuI9wu3nRE0gMC5ur9LRS1xWzbAC5h0aeRV0KtbJfye3wwokKIHrVGzuuIJy_xUUmA6dHd61qPOGaBZBHWdsXBcrz7E5E7tcga9WxRkx-D4EvBpnjc6NAreSeY9yv2NDBaPCGafGhFms
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:31:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '257'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":49412,"name":"MBANK S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWMBK","countryId":26,"city":"Lodz","branch":"(Retail
+        Banking)","isDeleted":false}]'
+  recorded_at: Thu, 08 Oct 2020 11:31:43 GMT
+recorded_with: VCR 6.0.0

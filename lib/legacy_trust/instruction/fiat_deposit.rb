@@ -7,7 +7,7 @@ module LegacyTrust
     module FiatDeposit
       class << self
         #
-        # GET /instructions/deposits-fiat
+        # POST /instructions/deposits-fiat
         #
         # - +opts+: hash that allows to enter :params, :body and :headers
         #

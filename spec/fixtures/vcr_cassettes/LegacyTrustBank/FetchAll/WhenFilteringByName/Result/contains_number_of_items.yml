@@ -1,0 +1,168 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:31:46 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1324'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3MDYsImV4cCI6MTYwMjE2MDMwNiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.dtRGbONMrbYxGEUi6IYlh5GCO5V4S_B07gb1851qzI1eXvRqZB3LSxw_Xpg0ewM8vr8msR1O5X52C-ah7dXM4HF-8bn-lOwHNJChTThKBryUzv2gOa-kCaMXzF3qAlRxQRYzIN9akPqVlj97I1IbIsHw_TRQJ2w98X7mbaTcPaWc3TrSR2rFsIvJPPZDiirB-bxQWfxObtL8R3Xv6Kcoo6QY-Z4TJDSPy-eiM_syJpwVWrX3pdcQN2e3LMRf1Tc4pFPcfun3PsFNb5ipqxDEuK3fcTIQi-zSwnEdAa0ST1eZ1MiuI3pYgGF7xxGGfkwn9rgX4qaddCNnUG1aFhBs9poh22x8ale4vBMM5hJ2Oe_BZmJASxqMSvns-aoSlXk7TseuM_UQ1TMUqCWboFzQS9bX7dmEVZnPZHOx83DrSX-ZYD-eo3kSxSJnjFvxdVmF7YBYEyUrpDzATR4oJ_OZzdXu_cQ_Bq3y8rhmwM27TnjPNihTPiEjJ0H816RCjpTudLZ9zqelmH78uL-zb1fxrTEsBOr3_kE4ZDputzhfC2tRtmysjQNHvPOpTSP6cvXRxtGZ5W63MnFpvQoGakKtZt9cDFoL3bgyhtiPFNQPEzeyRMTJxKggpZPiyZES95CNNSmUNVjwSjvfD7ovZ1PFc3PYyLNjMPDG7_Boif1WIn0","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Thu, 08 Oct 2020 11:31:46 GMT
+- request:
+    method: get
+    uri: https://partner-api.smarttrust.welton.ee/banks/search?name=MBANK%20S.A.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Clientid:
+      - config_env['GLOBAL_CLIENT_ID']
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIxNTY3MDYsImV4cCI6MTYwMjE2MDMwNiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.dtRGbONMrbYxGEUi6IYlh5GCO5V4S_B07gb1851qzI1eXvRqZB3LSxw_Xpg0ewM8vr8msR1O5X52C-ah7dXM4HF-8bn-lOwHNJChTThKBryUzv2gOa-kCaMXzF3qAlRxQRYzIN9akPqVlj97I1IbIsHw_TRQJ2w98X7mbaTcPaWc3TrSR2rFsIvJPPZDiirB-bxQWfxObtL8R3Xv6Kcoo6QY-Z4TJDSPy-eiM_syJpwVWrX3pdcQN2e3LMRf1Tc4pFPcfun3PsFNb5ipqxDEuK3fcTIQi-zSwnEdAa0ST1eZ1MiuI3pYgGF7xxGGfkwn9rgX4qaddCNnUG1aFhBs9poh22x8ale4vBMM5hJ2Oe_BZmJASxqMSvns-aoSlXk7TseuM_UQ1TMUqCWboFzQS9bX7dmEVZnPZHOx83DrSX-ZYD-eo3kSxSJnjFvxdVmF7YBYEyUrpDzATR4oJ_OZzdXu_cQ_Bq3y8rhmwM27TnjPNihTPiEjJ0H816RCjpTudLZ9zqelmH78uL-zb1fxrTEsBOr3_kE4ZDputzhfC2tRtmysjQNHvPOpTSP6cvXRxtGZ5W63MnFpvQoGakKtZt9cDFoL3bgyhtiPFNQPEzeyRMTJxKggpZPiyZES95CNNSmUNVjwSjvfD7ovZ1PFc3PYyLNjMPDG7_Boif1WIn0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 11:31:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":34446,"name":"MBANK S.A., POBOCKA ZAHRANICNEJ BANKY","swiftCode":"BREXSKBXXXX","countryId":113,"city":"Bratislava","branch":null,"isDeleted":false},{"id":44config_env[''GLOBAL_CLIENT_ID'']4,"name":"BANCA
+        DE FINANTE SI COMERT S.A. (FINCOMBANK S.A.)","swiftCode":"FTMDMD2XXXX","countryId":57,"city":"Chisinau","branch":null,"isDeleted":false},{"id":49376,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWZIE","countryId":26,"city":"Zielona
+        Gora","branch":"(Zielona Gora Branch)","isDeleted":false},{"id":49377,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWWRO","countryId":26,"city":"Wroclaw","branch":null,"isDeleted":false},{"id":49378,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWWA3","countryId":26,"city":"Warszawa","branch":"(Warszawa
+        Iii Branch)","isDeleted":false},{"id":49379,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWWA2","countryId":26,"city":"Warszawa","branch":"(Warszawa
+        Ii Branch)","isDeleted":false},{"id":49380,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWXXX","countryId":26,"city":"Warszawa","branch":"(Head
+        Office)","isDeleted":false},{"id":49381,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWMDM","countryId":26,"city":"Warszawa","branch":"(Dom
+        Maklerski Mbanku S.A.)","isDeleted":false},{"id":49382,"name":"MBANK S.A.
+        (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWCUS","countryId":26,"city":"Warszawa","branch":"(Custody
+        Department)","isDeleted":false},{"id":49383,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWWA4","countryId":26,"city":"Warszawa","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49384,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWWA1","countryId":26,"city":"Warszawa","branch":"(Branch)","isDeleted":false},{"id":49385,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWWAL","countryId":26,"city":"Walbrzych","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49386,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWTOR","countryId":26,"city":"Torun","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49387,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWSZC","countryId":26,"city":"Szczecin","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49388,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWRZE","countryId":26,"city":"Rzeszow","branch":"(Rzeszow
+        Branch)","isDeleted":false},{"id":49389,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWRYB","countryId":26,"city":"Rybnik","branch":"(Rybnik
+        Branch)","isDeleted":false},{"id":49390,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWPOZ","countryId":26,"city":"Poznan","branch":null,"isDeleted":false},{"id":49391,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWOPO","countryId":26,"city":"Opole","branch":"(Opole
+        Branch)","isDeleted":false},{"id":49392,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWOLS","countryId":26,"city":"Olsztyn","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49393,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWNWS","countryId":26,"city":"Nowy Sacz","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49394,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWLUB","countryId":26,"city":"Lublin","branch":null,"isDeleted":false},{"id":49395,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWLOD","countryId":26,"city":"Lodz","branch":null,"isDeleted":false},{"id":49396,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWMUL","countryId":26,"city":"Lodz","branch":"(Retail
+        Banking)","isDeleted":false},{"id":49412,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWMBK","countryId":26,"city":"Lodz","branch":"(Retail
+        Banking)","isDeleted":false},{"id":49427,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWOMB","countryId":26,"city":"Lodz","branch":"(Mobile
+        Banking)","isDeleted":false},{"id":49428,"name":"MBANK S.A. (FORMERLY BRE
+        BANK S.A.)","swiftCode":"BREXPLPWKOS","countryId":26,"city":"Koszalin","branch":"(Corporate
+        Branch)","isDeleted":false},{"id":49456,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWKIE","countryId":26,"city":"Kielce","branch":"(Kielce
+        Branch)","isDeleted":false},{"id":49457,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWKAT","countryId":26,"city":"Katowice","branch":null,"isDeleted":false},{"id":49458,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWRCO","countryId":26,"city":"Katowice","branch":"(Regional
+        Operation Center)","isDeleted":false},{"id":49459,"name":"MBANK S.A. (FORMERLY
+        BRE BANK S.A.)","swiftCode":"BREXPLPWKAL","countryId":26,"city":"Kalisz","branch":"(Kalisz
+        Branch)","isDeleted":false},{"id":49460,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWGOR","countryId":26,"city":"Gorzow Wielkopolski","branch":"(Gorzow
+        Wielkopolski Branch)","isDeleted":false},{"id":49461,"name":"MBANK S.A. (FORMERLY
+        BRE BANK S.A.)","swiftCode":"BREXPLPWGDY","countryId":26,"city":"Gdynia","branch":"(Gdynia
+        Branch)","isDeleted":false},{"id":49462,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWGDA","countryId":26,"city":"Gdansk","branch":null,"isDeleted":false},{"id":49463,"name":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","swiftCode":"BREXPLPWCZE","countryId":26,"city":"Czestochowa","branch":"(Czestochowa
+        Branch)","isDeleted":false},{"id":49464,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWBYD","countryId":26,"city":"Bydgoszcz","branch":"(Bydgoszcz
+        Branch)","isDeleted":false},{"id":49465,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWBIB","countryId":26,"city":"Bielsko Biala","branch":"(Bielsko
+        Biala Branch)","isDeleted":false},{"id":49466,"name":"MBANK S.A. (FORMERLY
+        BRE BANK S.A.)","swiftCode":"BREXPLPWBIA","countryId":26,"city":"Bialystok","branch":"(Bialystok
+        Branch)","isDeleted":false},{"id":49467,"name":"MBANK S.A. (FORMERLY BRE BANK
+        S.A.)","swiftCode":"BREXPLPWKRA","countryId":26,"city":"Krakow","branch":null,"isDeleted":false},{"id":78377,"name":"MBANK
+        S.A., ORGANIZACNI SLOZKA","swiftCode":"BREXCZPPXXX","countryId":221,"city":"Prague","branch":null,"isDeleted":false}]'
+  recorded_at: Thu, 08 Oct 2020 11:31:47 GMT
+recorded_with: VCR 6.0.0
