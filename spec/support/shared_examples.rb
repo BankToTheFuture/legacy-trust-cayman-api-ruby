@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.shared_examples_for 'invalid API setup' do
-  before { allow(LegacyTrust).to receive(:client_id).and_return(nil) }
+  before { allow(LegacyTrust).to receive(:oauth_client_id).and_return(nil) }
 
   it 'raises error' do
     expect { method_execution }.to raise_error(LegacyTrust::SetupError)

@@ -1,3 +1,8 @@
 ---
-CLIENT_ID: --- SOME ID ---
-CLIENT_SECRET: --- SOME SECRET ---
+# OAuth Authorization keys [Mandatory]
+OAUTH_CLIENT_ID: --- SOME ID ---
+OAUTH_CLIENT_SECRET: --- SOME SECRET ---
+
+# API global keys [Optional]
+GLOBAL_CLIENT_ID: --- SOME ID ---
+GLOBAL_SERVICE_ACCOUNT_ID: --- SOME ID ---

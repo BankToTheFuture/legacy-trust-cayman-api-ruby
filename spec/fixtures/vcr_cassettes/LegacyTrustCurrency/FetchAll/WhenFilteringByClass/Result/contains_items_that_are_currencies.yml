@@ -5,7 +5,7 @@ http_interactions:
     uri: https://auth.smarttrust.welton.ee/connect/token
     body:
       encoding: UTF-8
-      string: client_id=config_env['CLIENT_ID']&client_secret=config_env['CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
     headers:
       User-Agent:
       - Faraday v1.0.1

@@ -22,14 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-Setup OAuth2 credentials `client_id` and `client_secret` before your first use.
+### OAuth2 authentication
+Setup OAuth2 credentials `oauth_client_id` and `oauth_client_secret` before your first use. These are mandatory to establish authentication with LegacyTrust API. In case these keys are missing or invalid, you should get `LegacyTrust::SetupError`.
 
 Example:
 ```ruby
 require 'legacy_trust'
 
-LegacyTrust.client_id = 'your-client-id'
-Legacytrust.client_secret = 'your-client-secret'
+LegacyTrust.oauth_client_id = 'your-client-id'
+Legacytrust.oauth_client_secret = 'your-client-secret'
 
 LegacyTrust::Currency.fetch_all(params: { currency_class: 'Fiat' })
 ```
@@ -47,6 +48,19 @@ gives the following result:
    {:symbol=>"TYTYYY", :name=>"ttyjnljnlnknjjk jk kj lj jk j k l ", :class=>"Fiat", :decimal_places=>2},
    {:symbol=>"USD", :name=>"US Dollar", :class=>"Fiat", :decimal_places=>2}],
  @status=200>
+```
+
+### Global API settings
+In case that your API integration is not based on multiple client ids or service account ids, there is an option to set up `global_client_id` and `global_service_account_id` so there is no need to attach them to each API request execution.
+
+Example:
+```ruby
+require 'legacy_trust'
+
+LegacyTrust.global_client_id = 'your-client-id'
+Legacytrust.global_service_account_id = 'your-service-account-id'
+
+LegacyTrust::Instruction::FiatDeposit.create(body: { client_bank_account_id: 36, amount: 100.5 })
 ```
 
 ## Contributing
