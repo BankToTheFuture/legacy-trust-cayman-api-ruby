@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+require 'legacy_trust/bank'
+require 'legacy_trust/country'
+require 'legacy_trust/currency'
+require 'legacy_trust/instruction/fiat_deposit'
 require 'legacy_trust/result'
 require 'legacy_trust/request_error'
 require 'legacy_trust/setup_error'
-require 'legacy_trust/currency'
-require 'legacy_trust/bank'
-require 'legacy_trust/instruction/fiat_deposit'
+
 require 'awrence'
 require 'oauth2'
 require 'plissken'
