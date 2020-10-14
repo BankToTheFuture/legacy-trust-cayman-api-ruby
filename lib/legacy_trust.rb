@@ -7,6 +7,7 @@ require 'legacy_trust/instruction/fiat_deposit'
 require 'legacy_trust/result'
 require 'legacy_trust/request_error'
 require 'legacy_trust/setup_error'
+require 'legacy_trust/third_party_bank_account'
 
 require 'awrence'
 require 'oauth2'

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 12:47:24 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1332'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1OTMyNDQsImV4cCI6MTYwMjU5Njg0NCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pbGEzESz8XpCW4mQbnKVSdt9rSJf51kyE2GSdAMR-Obxwej63mM6vtD4b5I-QAryu4XZ3Uu9egrnJFfSW-fsDGfErkddHuX_SfU9lT92UXzSBMlR5nGwI09biO3IzHPmsGWP-gEnfBhYg924e4uwSsO_RWMG5u34ftZl9AlYDcWct6MXxXcyW4IbisbZn-heslU1f8KArQMJNTWumv-3XBgP7Akf4sPL-cc5WtlIH0eQuOq5Ob_pQwkGV9NcqmsLnTxyo9AieBWPQmY9KpULovkPwnSVoc408OC4NvsmfEDhBaWTAlPpyezOpEAwuVA4elFitGNdw_4dBruWMWIAmW0hBY-WBPPD9RxoAwPz0p_B5KzSjVmB5GvTqCon4TIJzM_8Rk_uYN8QsE4EKIHf_HnS3xKaJrC_ykiqF6pcAJAiG1Tz_yp8u00Tef6fcSm2QDKgSTGQGKv5Kw9YAi8Xq5G5E7BL3oBD1IvAROKr1gBZW6i__UGxYE83BUfqauNYhUz3HcHbP1erJyCqou5sFIFoe8yaSPcM_V6TP2g0F-_l2a9rI8BEE9N33UazuYvY88u3rMvjfYjKey8sggS_vLukZtg6zCqfTmXgTzHX-JOkathF7kIRkUb5dgbDS7V2G2V28hvXUAUx2DXoXskADokwst9zokMD9TmJmchX8YI","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Tue, 13 Oct 2020 12:47:24 GMT
+- request:
+    method: post
+    uri: https://partner-api.smarttrust.welton.ee/bank-accounts/addthirdparty
+    body:
+      encoding: UTF-8
+      string: '{"bankId":49412,"accountHolder":"Roboexpert","accountNumber":"271140200400003702412029config_env[''GLOBAL_SERVICE_ACCOUNT_ID'']","detail":{"line1":"Zygmunta
+        Jórskiego 12","city":"Warszawa","postalCode":"03-584","countryId":26,"relationship":"Investor"}}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Clientid:
+      - config_env['GLOBAL_CLIENT_ID']
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1OTMyNDQsImV4cCI6MTYwMjU5Njg0NCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pbGEzESz8XpCW4mQbnKVSdt9rSJf51kyE2GSdAMR-Obxwej63mM6vtD4b5I-QAryu4XZ3Uu9egrnJFfSW-fsDGfErkddHuX_SfU9lT92UXzSBMlR5nGwI09biO3IzHPmsGWP-gEnfBhYg924e4uwSsO_RWMG5u34ftZl9AlYDcWct6MXxXcyW4IbisbZn-heslU1f8KArQMJNTWumv-3XBgP7Akf4sPL-cc5WtlIH0eQuOq5Ob_pQwkGV9NcqmsLnTxyo9AieBWPQmY9KpULovkPwnSVoc408OC4NvsmfEDhBaWTAlPpyezOpEAwuVA4elFitGNdw_4dBruWMWIAmW0hBY-WBPPD9RxoAwPz0p_B5KzSjVmB5GvTqCon4TIJzM_8Rk_uYN8QsE4EKIHf_HnS3xKaJrC_ykiqF6pcAJAiG1Tz_yp8u00Tef6fcSm2QDKgSTGQGKv5Kw9YAi8Xq5G5E7BL3oBD1IvAROKr1gBZW6i__UGxYE83BUfqauNYhUz3HcHbP1erJyCqou5sFIFoe8yaSPcM_V6TP2g0F-_l2a9rI8BEE9N33UazuYvY88u3rMvjfYjKey8sggS_vLukZtg6zCqfTmXgTzHX-JOkathF7kIRkUb5dgbDS7V2G2V28hvXUAUx2DXoXskADokwst9zokMD9TmJmchX8YI
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 12:47:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '121'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '41'
+  recorded_at: Tue, 13 Oct 2020 12:47:25 GMT
+recorded_with: VCR 6.0.0
