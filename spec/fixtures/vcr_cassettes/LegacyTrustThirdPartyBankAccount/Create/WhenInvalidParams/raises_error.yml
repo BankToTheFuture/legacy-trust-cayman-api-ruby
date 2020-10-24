@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 11:52:25 GMT
+      - Fri, 23 Oct 2020 07:50:46 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '1318'
+      - '1319'
       Connection:
       - keep-alive
       Cache-Control:
@@ -55,25 +55,21 @@ http_interactions:
       - ASP.NET
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1ODk5NDUsImV4cCI6MTYwMjU5MzU0NSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.oSmRFANIPPC8h-Y0PCLE7u5vyiZhqIvnQEG74emVXyMV_FF3t6LVodBm6-SLNbTWLMtus7PaGWSopkzy2aqmttEtQFKlzdaUsmNF7EHSGYlJ2vO_aZ7E-J4p3gccwfdKQS2NO9DkWw5TET_tTPHpH_QPqbmjFeZz6IDVjdZWLti9l-M-Ot2m9rHwTocaoodV5gHmOO2Ec705UQbgP91tp11BZmosF7Mo37RRSCqDoCgoOSZdnWLhtPwGRUC-IcaSxQkIk5QzgXqNKFL4xaP8fon90NS8ctfXuL9nfLsZvHmotHxg014D6mTmIWkU4Gl6dasDe9fYoJF4ADLEoHKfU6RB-bHUaEx73dB3ic7LvmMIbByLlsYCFzJKtuyjs_BPscAbyOohfyJqms-sHn4_x3DaIqq5zmYc1bud0tzw2N5SjMMs8U-ooWW0fXes4uxEegpdmO-vwdghPZit4RQEK_9NQDXNKeFA9M47wUuEoBv6aIBeB6_t8KkD5lSr1rEofSeO8ZACP2AvQi2PCJHbmSp4jTaewstpLXTE01v5GbFYm8KRX16FQCw4OvfXLMkpCQENq9H_4uviFShl_P5SlbEc-wtuEghsDlSImS5Reael0pMwBXTF8BdjmUU-9DYnhMQg7BmcQWGUN_CXJgy5HmLayGqt9NKokS-Pk8bcYx8","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
-  recorded_at: Tue, 13 Oct 2020 11:52:25 GMT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM0Mzk0NDYsImV4cCI6MTYwMzQ0MzA0NiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.qyTzPtA1Jg8tvEqezE6oMk4BOpHt-_PRkagcHWtRgR9jscfoM-Qtcx3rCMk-EPgCFnpal_N18WUVLZ9tCE95jSVmEYxCZJGe8ahsCnw9AOV1GwUPyGRF_4KuBkzYbHu5Okfv9rjTInFBcj_gfYgvvl7gjOnpvg-3zJkzuLTd_i10LIPu9Jdm2C0JUQI7nPR84T_O8HJ_eR94WROydQzyr7GWt3pVefCZCgUpNrm1lJD3Wa-AOlsebkobBOwA9Ws8i2PLLpnuKro5gja4Qvc1pvnU2386wHzBYczXOD7F1IWByUB7iN9_PM2rHBjKuRbwkAhzqdLJxaUUrrZTiRabd2EAsDpIURJNNaYPGdyStM0ePOvsKa2eIkNYa34cfSf0h_-LLfEjp-eK5xlywNhvkxW0x5J5df0WuM-xwjTkRfE7zLeSZ328ffrqtYiHXabueexSLJskpw3FxoQDIDJMvya3tEadmutOPIAm1E2lBtgtvDqWcDwh6Rpo0SS_449YETb59idoWVslJH6p318FFOmrPYfB4jBy3ChvUY4-GRPr0gm8yCEAqs8FsusQ4C3NOUELyZXEIPynTO61SG56gLCaBPMKDv06HvuRrxGK_CRy3QyqzQ64BfipKoPCOxErvGO-gZfw1JNtlacjBi5jHSjyzfYZsj8BYupjZ0o7PkU","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Fri, 23 Oct 2020 07:50:46 GMT
 - request:
     method: post
-    uri: https://partner-api.smarttrust.welton.ee/bank-accounts/addthirdparty
+    uri: https://partner-api.smarttrust.welton.ee/3rd-party-bank-accounts
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"clientId":config_env[''GLOBAL_CLIENT_ID'']}'
     headers:
       User-Agent:
       - Faraday v1.0.1
       Content-Type:
       - application/json
-      Clientid:
-      - config_env['GLOBAL_CLIENT_ID']
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1ODk5NDUsImV4cCI6MTYwMjU5MzU0NSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.oSmRFANIPPC8h-Y0PCLE7u5vyiZhqIvnQEG74emVXyMV_FF3t6LVodBm6-SLNbTWLMtus7PaGWSopkzy2aqmttEtQFKlzdaUsmNF7EHSGYlJ2vO_aZ7E-J4p3gccwfdKQS2NO9DkWw5TET_tTPHpH_QPqbmjFeZz6IDVjdZWLti9l-M-Ot2m9rHwTocaoodV5gHmOO2Ec705UQbgP91tp11BZmosF7Mo37RRSCqDoCgoOSZdnWLhtPwGRUC-IcaSxQkIk5QzgXqNKFL4xaP8fon90NS8ctfXuL9nfLsZvHmotHxg014D6mTmIWkU4Gl6dasDe9fYoJF4ADLEoHKfU6RB-bHUaEx73dB3ic7LvmMIbByLlsYCFzJKtuyjs_BPscAbyOohfyJqms-sHn4_x3DaIqq5zmYc1bud0tzw2N5SjMMs8U-ooWW0fXes4uxEegpdmO-vwdghPZit4RQEK_9NQDXNKeFA9M47wUuEoBv6aIBeB6_t8KkD5lSr1rEofSeO8ZACP2AvQi2PCJHbmSp4jTaewstpLXTE01v5GbFYm8KRX16FQCw4OvfXLMkpCQENq9H_4uviFShl_P5SlbEc-wtuEghsDlSImS5Reael0pMwBXTF8BdjmUU-9DYnhMQg7BmcQWGUN_CXJgy5HmLayGqt9NKokS-Pk8bcYx8
-      Content-Length:
-      - '0'
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM0Mzk0NDYsImV4cCI6MTYwMzQ0MzA0NiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.qyTzPtA1Jg8tvEqezE6oMk4BOpHt-_PRkagcHWtRgR9jscfoM-Qtcx3rCMk-EPgCFnpal_N18WUVLZ9tCE95jSVmEYxCZJGe8ahsCnw9AOV1GwUPyGRF_4KuBkzYbHu5Okfv9rjTInFBcj_gfYgvvl7gjOnpvg-3zJkzuLTd_i10LIPu9Jdm2C0JUQI7nPR84T_O8HJ_eR94WROydQzyr7GWt3pVefCZCgUpNrm1lJD3Wa-AOlsebkobBOwA9Ws8i2PLLpnuKro5gja4Qvc1pvnU2386wHzBYczXOD7F1IWByUB7iN9_PM2rHBjKuRbwkAhzqdLJxaUUrrZTiRabd2EAsDpIURJNNaYPGdyStM0ePOvsKa2eIkNYa34cfSf0h_-LLfEjp-eK5xlywNhvkxW0x5J5df0WuM-xwjTkRfE7zLeSZ328ffrqtYiHXabueexSLJskpw3FxoQDIDJMvya3tEadmutOPIAm1E2lBtgtvDqWcDwh6Rpo0SS_449YETb59idoWVslJH6p318FFOmrPYfB4jBy3ChvUY4-GRPr0gm8yCEAqs8FsusQ4C3NOUELyZXEIPynTO61SG56gLCaBPMKDv06HvuRrxGK_CRy3QyqzQ64BfipKoPCOxErvGO-gZfw1JNtlacjBi5jHSjyzfYZsj8BYupjZ0o7PkU
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -84,11 +80,11 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 13 Oct 2020 11:52:25 GMT
+      - Fri, 23 Oct 2020 07:50:config_env['GLOBAL_SERVICE_ACCOUNT_ID'] GMT
       Content-Type:
       - application/problem+json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '357'
       Connection:
       - keep-alive
       Server:
@@ -98,7 +94,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One
-        or more validation errors occurred.","status":400,"traceId":"|dd77bdce-465cddbc101e940c.","errors":{"":["A
-        non-empty request body is required."]}}'
-  recorded_at: Tue, 13 Oct 2020 11:52:25 GMT
+        or more validation errors occurred.","status":400,"traceId":"|a9559d39-4a1a660678674e9a.","errors":{"AccountHolder":["The
+        AccountHolder field is required."],"AccountNumber":["The AccountNumber field
+        is required."],"AccountHolderDetail":["The AccountHolderDetail field is required."]}}'
+  recorded_at: Fri, 23 Oct 2020 07:50:47 GMT
 recorded_with: VCR 6.0.0

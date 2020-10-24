@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 12:47:24 GMT
+      - Fri, 23 Oct 2020 07:55:config_env['GLOBAL_CLIENT_ID'] GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '1332'
+      - '1320'
       Connection:
       - keep-alive
       Cache-Control:
@@ -55,49 +55,50 @@ http_interactions:
       - ASP.NET
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1OTMyNDQsImV4cCI6MTYwMjU5Njg0NCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pbGEzESz8XpCW4mQbnKVSdt9rSJf51kyE2GSdAMR-Obxwej63mM6vtD4b5I-QAryu4XZ3Uu9egrnJFfSW-fsDGfErkddHuX_SfU9lT92UXzSBMlR5nGwI09biO3IzHPmsGWP-gEnfBhYg924e4uwSsO_RWMG5u34ftZl9AlYDcWct6MXxXcyW4IbisbZn-heslU1f8KArQMJNTWumv-3XBgP7Akf4sPL-cc5WtlIH0eQuOq5Ob_pQwkGV9NcqmsLnTxyo9AieBWPQmY9KpULovkPwnSVoc408OC4NvsmfEDhBaWTAlPpyezOpEAwuVA4elFitGNdw_4dBruWMWIAmW0hBY-WBPPD9RxoAwPz0p_B5KzSjVmB5GvTqCon4TIJzM_8Rk_uYN8QsE4EKIHf_HnS3xKaJrC_ykiqF6pcAJAiG1Tz_yp8u00Tef6fcSm2QDKgSTGQGKv5Kw9YAi8Xq5G5E7BL3oBD1IvAROKr1gBZW6i__UGxYE83BUfqauNYhUz3HcHbP1erJyCqou5sFIFoe8yaSPcM_V6TP2g0F-_l2a9rI8BEE9N33UazuYvY88u3rMvjfYjKey8sggS_vLukZtg6zCqfTmXgTzHX-JOkathF7kIRkUb5dgbDS7V2G2V28hvXUAUx2DXoXskADokwst9zokMD9TmJmchX8YI","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
-  recorded_at: Tue, 13 Oct 2020 12:47:24 GMT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM0Mzk3MzAsImV4cCI6MTYwMzQ0MzMzMCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.TvDSF5kuZ52YpcwyIxNkKz7eTsuEqhljXO4vTAPrMWddNalP80EjpF7cZqvXs5rtXKv-GACiwBFiP9v6NGwa4suP7hxSer4-A1ZyxuccVzUp6or3_Ty2GA-uqxdHrSrJGzoqCx-jJt6Z1bKC-_Zou2W3N8e4xkPlLGFuKfPOhGm3Kc6JhWrS4-dXs5pib7zzlZthREJ56SLl-p0rUqyDudAmy1DoqpFZZnr1LmvOc4noGD452KdGGRewBrxqKEchkJ371YDwSG_DIyl28D8QceLivhh_ONHxPsuHRSZ68nveevT4S8FAdT1QhbcON4iAyq52ngiQNC5DoKWR1euSDlQ-7oK3y4mNo3gKOrqqUTnQZrwxDFsgjvxaiXMNAZ1iGgw7tCUFiRsLfEJB0F9o1jboBBbIlRHt2PtWNfU9ajBwv93_dKpb0WIYHJA1q9TRoqCTfqtakAaKFB9x5bWIfh-UVb8MVdby_PsPKCSdhML0toaJ_IDSYTDgqIf5YwC6_Fk5DaUw44oGU0zbjJOBnEarThhsxxEQgNpTFHh2uH0R6jZxtsQQoCgN0TJzkqYvdvJdy_-RTIp8EDWnm3IRS_eCSmrw_ECcZb7uUTsXOQjR3kNtHyvrWWJTnewHG1ARTYazDr0BmjJKbcN8Kt7wj9UxpkjXs0iucNZKQHlgM0Y","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Fri, 23 Oct 2020 07:55:30 GMT
 - request:
     method: post
-    uri: https://partner-api.smarttrust.welton.ee/bank-accounts/addthirdparty
+    uri: https://partner-api.smarttrust.welton.ee/3rd-party-bank-accounts
     body:
       encoding: UTF-8
-      string: '{"bankId":49412,"accountHolder":"Roboexpert","accountNumber":"271140200400003702412029config_env[''GLOBAL_SERVICE_ACCOUNT_ID'']","detail":{"line1":"Zygmunta
+      string: '{"clientId":config_env[''GLOBAL_CLIENT_ID''],"bankId":49412,"accountHolder":"Roboexpert","accountNumber":"27114020040000370241202935","accountHolderDetail":{"addressLine1":"Zygmunta
         Jórskiego 12","city":"Warszawa","postalCode":"03-584","countryId":26,"relationship":"Investor"}}'
     headers:
       User-Agent:
       - Faraday v1.0.1
       Content-Type:
       - application/json
-      Clientid:
-      - config_env['GLOBAL_CLIENT_ID']
+      Api-Version:
+      - 1.0.0
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDI1OTMyNDQsImV4cCI6MTYwMjU5Njg0NCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pbGEzESz8XpCW4mQbnKVSdt9rSJf51kyE2GSdAMR-Obxwej63mM6vtD4b5I-QAryu4XZ3Uu9egrnJFfSW-fsDGfErkddHuX_SfU9lT92UXzSBMlR5nGwI09biO3IzHPmsGWP-gEnfBhYg924e4uwSsO_RWMG5u34ftZl9AlYDcWct6MXxXcyW4IbisbZn-heslU1f8KArQMJNTWumv-3XBgP7Akf4sPL-cc5WtlIH0eQuOq5Ob_pQwkGV9NcqmsLnTxyo9AieBWPQmY9KpULovkPwnSVoc408OC4NvsmfEDhBaWTAlPpyezOpEAwuVA4elFitGNdw_4dBruWMWIAmW0hBY-WBPPD9RxoAwPz0p_B5KzSjVmB5GvTqCon4TIJzM_8Rk_uYN8QsE4EKIHf_HnS3xKaJrC_ykiqF6pcAJAiG1Tz_yp8u00Tef6fcSm2QDKgSTGQGKv5Kw9YAi8Xq5G5E7BL3oBD1IvAROKr1gBZW6i__UGxYE83BUfqauNYhUz3HcHbP1erJyCqou5sFIFoe8yaSPcM_V6TP2g0F-_l2a9rI8BEE9N33UazuYvY88u3rMvjfYjKey8sggS_vLukZtg6zCqfTmXgTzHX-JOkathF7kIRkUb5dgbDS7V2G2V28hvXUAUx2DXoXskADokwst9zokMD9TmJmchX8YI
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM0Mzk3MzAsImV4cCI6MTYwMzQ0MzMzMCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.TvDSF5kuZ52YpcwyIxNkKz7eTsuEqhljXO4vTAPrMWddNalP80EjpF7cZqvXs5rtXKv-GACiwBFiP9v6NGwa4suP7hxSer4-A1ZyxuccVzUp6or3_Ty2GA-uqxdHrSrJGzoqCx-jJt6Z1bKC-_Zou2W3N8e4xkPlLGFuKfPOhGm3Kc6JhWrS4-dXs5pib7zzlZthREJ56SLl-p0rUqyDudAmy1DoqpFZZnr1LmvOc4noGD452KdGGRewBrxqKEchkJ371YDwSG_DIyl28D8QceLivhh_ONHxPsuHRSZ68nveevT4S8FAdT1QhbcON4iAyq52ngiQNC5DoKWR1euSDlQ-7oK3y4mNo3gKOrqqUTnQZrwxDFsgjvxaiXMNAZ1iGgw7tCUFiRsLfEJB0F9o1jboBBbIlRHt2PtWNfU9ajBwv93_dKpb0WIYHJA1q9TRoqCTfqtakAaKFB9x5bWIfh-UVb8MVdby_PsPKCSdhML0toaJ_IDSYTDgqIf5YwC6_Fk5DaUw44oGU0zbjJOBnEarThhsxxEQgNpTFHh2uH0R6jZxtsQQoCgN0TJzkqYvdvJdy_-RTIp8EDWnm3IRS_eCSmrw_ECcZb7uUTsXOQjR3kNtHyvrWWJTnewHG1ARTYazDr0BmjJKbcN8Kt7wj9UxpkjXs0iucNZKQHlgM0Y
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       Date:
-      - Tue, 13 Oct 2020 12:47:24 GMT
+      - Fri, 23 Oct 2020 07:55:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Vary:
-      - Accept-Encoding
+      Location:
+      - https://partner-api.smarttrust.welton.ee/3rd-party-bank-accounts/48
       Server:
       - Microsoft-IIS/10.0
       X-Powered-By:
       - ASP.NET
     body:
       encoding: ASCII-8BIT
-      string: '40'
-  recorded_at: Tue, 13 Oct 2020 12:47:24 GMT
+      string: !binary |-
+        eyJhY2NvdW50SG9sZGVyRGV0YWlsIjp7ImFkZHJlc3NMaW5lMSI6Ilp5Z211bnRhIErDs3Jza2llZ28gMTIiLCJhZGRyZXNzTGluZTIiOm51bGwsImNpdHkiOiJXYXJzemF3YSIsInBvc3RhbENvZGUiOiIwMy01ODQiLCJzdGF0ZVByb3ZpbmNlIjpudWxsLCJjb3VudHJ5SWQiOjI2LCJyZWxhdGlvbnNoaXAiOiJJbnZlc3RvciJ9LCJpZCI6NDgsImNsaWVudElkIjpjb25maWdfZW52WydHTE9CQUxfQ0xJRU5UX0lEJ10sImNsaWVudE5hbWUiOiJCbmtUb1RoZUZ1dHVyZSBUZXN0IENvIExpbWl0ZWQiLCJuYW1lIjpudWxsLCJhY2NvdW50SG9sZGVyIjoiUm9ib2V4cGVydCIsImFjY291bnROdW1iZXIiOiIyNzExNDAyMDA0MDAwMDM3MDI0MTIwMjkzNSIsImNsZWFyaW5nQ29kZSI6bnVsbCwiaXNQcmltYXJ5IjpmYWxzZSwiYmFuayI6eyJpZCI6NDk0MTIsIm5hbWUiOiJNQkFOSyBTLkEuIChGT1JNRVJMWSBCUkUgQkFOSyBTLkEuKSIsImJyYW5jaCI6IihSZXRhaWwgQmFua2luZykiLCJzd2lmdENvZGUiOiJCUkVYUExQV01CSyIsImNvdW50cnlJZCI6MjYsImNpdHkiOiJMb2R6IiwiaXNEZWxldGVkIjpmYWxzZX19
+  recorded_at: Fri, 23 Oct 2020 07:55:31 GMT
 recorded_with: VCR 6.0.0

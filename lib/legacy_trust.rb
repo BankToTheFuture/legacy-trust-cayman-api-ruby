@@ -48,6 +48,7 @@ module LegacyTrust
     end
 
     #
+    # - +key+: key that refers to the global_service_account_id in body
     # - +opts+: hash that may contain :params, :body and :headers
     #
     # Options Hash (opts):
@@ -55,9 +56,23 @@ module LegacyTrust
     #  - :body (Hash, String) - the body of the request
     #  - :headers (Hash) - http request headers
     #
-    def attach_global_service_account_id_to_body(opts = {})
+    def attach_global_service_account_id_to_body(key, opts = {})
       init_body = {}
-      init_body.merge!(service_account_id: global_service_account_id) if global_service_account_id
+      init_body.merge!(key => global_service_account_id) if global_service_account_id
+      opts.merge(body: init_body.merge(opts[:body] || {}))
+    end
+
+    #
+    # - +opts+: hash that may contain :params, :body and :headers
+    #
+    # Options Hash (opts):
+    #  - :params (Hash) - additional query parameters for the URL of the request
+    #  - :body (Hash, String) - the body of the request
+    #  - :headers (Hash) - http request headers
+    #
+    def attach_global_client_id_to_body(opts = {})
+      init_body = {}
+      init_body.merge!(client_id: global_client_id) if global_client_id
       opts.merge(body: init_body.merge(opts[:body] || {}))
     end
 
@@ -112,9 +127,10 @@ module LegacyTrust
     end
 
     def initial_headers
-      init = { 'content-type': 'application/json' }
-      init.merge!(client_id: global_client_id) if global_client_id
-      init
+      {
+        'content-type': 'application/json',
+        'api-version': API_VERSION
+      }
     end
 
     def initial_opts

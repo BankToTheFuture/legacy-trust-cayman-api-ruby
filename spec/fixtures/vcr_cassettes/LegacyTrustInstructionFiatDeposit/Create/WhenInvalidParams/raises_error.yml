@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 06 Oct 2020 17:24:26 GMT
+      - Wed, 21 Oct 2020 17:08:28 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
-      - '1321'
+      - '1323'
       Connection:
       - keep-alive
       Cache-Control:
@@ -55,23 +55,21 @@ http_interactions:
       - ASP.NET
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIwMDUwNjYsImV4cCI6MTYwMjAwODY2NiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.Z-uaHcx1ZbButySRAZ0ryElFXthths3I7IRU5JMr7SCkXpdv75O5l34TCtR3fFLd01qupR8AKo9QR-8fH3XtI2PlqZzs89-7MFZAFCEoA2RCbCcsqy-UeXHErJz7ePUoSlpK9248WGNZecjdQcpUBSis7_mpZ7XFRayt5Qf2tStcEkuDs8yCH7dTuAbOz18iTEq6d4R4gjhq2GMaIIK85WbJT_4vELhTkAYrAoE4iKSIk65ValSm7c4bU-zuDzTZ-SMk_FHMnmWaKXjruHrVuGlITgM8dqFWwqeppWc2G7Uv4GzOUqv1_qx--i_AOQzjP1CcxQGqKIlVbgo16s06bYxueI9KheiouUOIxCqR0L00rMhZw-PqqgDl8H0cYCTLdERHynKw8bGTMEf2DlD9J8pisF5jG-KQwT0yYdOQXuGybCTJlyT-qZ0rA58quXCKW-OxscshwBfG1-UnYJ35mOynz80xFeHOjNI8DcFR2TOyrq4jjNyDCAayAf5Tloi4g-YfSWA3r-6ERPmert9wWJRsCWvag3iO0rQhDpHLGte-mvWzIgvWnFk5I9nfw0mTWrRwT5erR1juy2bGKB3c_DdKpVe8cA9u8uIEMRZwEn3kFL1Yej-2v4CvBF7VC4piy7tYS4-49x7smCRofaFxXsb08ObnH8-B8YIOjvG8Rco","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
-  recorded_at: Tue, 06 Oct 2020 17:24:26 GMT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDMzMDAxMDgsImV4cCI6MTYwMzMwMzcwOCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pjfAcsOZYZPRw8gyUzWXgCD5w0Ow-pZjmdYE5lnB7mJANYQrdkQY9sWT8v3gr2hTCfIpN8cSc-AQF2w4TyrdxaXmcZuMJN2CHPzRynwjTDZzmfCYJdjkN5PMMGnfz650lbElrPe95WXUcoNwy-jHYH1w3_6PChfgqKOQxrdu6JwsU1Sl5Gc-z0_SvfSx2GecsYeXIFqOnN2jtFcxYD8JCzecIkgMhbgpjl-HzQtcVmiph8srPbhVB_BiGHSgxEnArkpQhWbcOCXgiu1kLkQhg_c3BpUq00v0jKRXMEEo6pBLG2KmYU0_6BjtB0iQeeXBXwvilF48h2qbZOxjk1gTqOToxQGIF_D4e1pPIvJ6ZXygpww0oNsXOg1pwzD2HcrThepvbgrp5XEq5Bus2j665CG7n5ZuZwiKJzdpLVG9uU1vHAzDkjcrGnoAknBRNgcR3dY52sHpHb7IDqGDmAXv55tmTWSxt1mo8xELb6i2nutn8aYOdQLImyRYFbN01PZSQQi_1swETw7bLlr1dKluXPcnIgmBvyok9IETSRhn6ptggWjx9Ygi1ecViqSIbSokD6P2-rfo5YKeHE50-4bdsIg9N5ttsVWra0C1Ots-q417_MjZ7-T3qrArK1xTQ8B35Yiun5MsqIv-r4UQ5JNsdtKWenJSWgRDV7bM8LEveq8","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Wed, 21 Oct 2020 17:08:28 GMT
 - request:
     method: post
-    uri: https://partner-api.smarttrust.welton.ee/instructions/deposits-fiat
+    uri: https://partner-api.smarttrust.welton.ee/instructions/deposits/fiat
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"targetServiceAccountId":config_env[''GLOBAL_SERVICE_ACCOUNT_ID''],"clientId":config_env[''GLOBAL_CLIENT_ID'']}'
     headers:
       User-Agent:
       - Faraday v1.0.1
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDIwMDUwNjYsImV4cCI6MTYwMjAwODY2NiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.Z-uaHcx1ZbButySRAZ0ryElFXthths3I7IRU5JMr7SCkXpdv75O5l34TCtR3fFLd01qupR8AKo9QR-8fH3XtI2PlqZzs89-7MFZAFCEoA2RCbCcsqy-UeXHErJz7ePUoSlpK9248WGNZecjdQcpUBSis7_mpZ7XFRayt5Qf2tStcEkuDs8yCH7dTuAbOz18iTEq6d4R4gjhq2GMaIIK85WbJT_4vELhTkAYrAoE4iKSIk65ValSm7c4bU-zuDzTZ-SMk_FHMnmWaKXjruHrVuGlITgM8dqFWwqeppWc2G7Uv4GzOUqv1_qx--i_AOQzjP1CcxQGqKIlVbgo16s06bYxueI9KheiouUOIxCqR0L00rMhZw-PqqgDl8H0cYCTLdERHynKw8bGTMEf2DlD9J8pisF5jG-KQwT0yYdOQXuGybCTJlyT-qZ0rA58quXCKW-OxscshwBfG1-UnYJ35mOynz80xFeHOjNI8DcFR2TOyrq4jjNyDCAayAf5Tloi4g-YfSWA3r-6ERPmert9wWJRsCWvag3iO0rQhDpHLGte-mvWzIgvWnFk5I9nfw0mTWrRwT5erR1juy2bGKB3c_DdKpVe8cA9u8uIEMRZwEn3kFL1Yej-2v4CvBF7VC4piy7tYS4-49x7smCRofaFxXsb08ObnH8-B8YIOjvG8Rco
-      Content-Length:
-      - '0'
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDMzMDAxMDgsImV4cCI6MTYwMzMwMzcwOCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.pjfAcsOZYZPRw8gyUzWXgCD5w0Ow-pZjmdYE5lnB7mJANYQrdkQY9sWT8v3gr2hTCfIpN8cSc-AQF2w4TyrdxaXmcZuMJN2CHPzRynwjTDZzmfCYJdjkN5PMMGnfz650lbElrPe95WXUcoNwy-jHYH1w3_6PChfgqKOQxrdu6JwsU1Sl5Gc-z0_SvfSx2GecsYeXIFqOnN2jtFcxYD8JCzecIkgMhbgpjl-HzQtcVmiph8srPbhVB_BiGHSgxEnArkpQhWbcOCXgiu1kLkQhg_c3BpUq00v0jKRXMEEo6pBLG2KmYU0_6BjtB0iQeeXBXwvilF48h2qbZOxjk1gTqOToxQGIF_D4e1pPIvJ6ZXygpww0oNsXOg1pwzD2HcrThepvbgrp5XEq5Bus2j665CG7n5ZuZwiKJzdpLVG9uU1vHAzDkjcrGnoAknBRNgcR3dY52sHpHb7IDqGDmAXv55tmTWSxt1mo8xELb6i2nutn8aYOdQLImyRYFbN01PZSQQi_1swETw7bLlr1dKluXPcnIgmBvyok9IETSRhn6ptggWjx9Ygi1ecViqSIbSokD6P2-rfo5YKeHE50-4bdsIg9N5ttsVWra0C1Ots-q417_MjZ7-T3qrArK1xTQ8B35Yiun5MsqIv-r4UQ5JNsdtKWenJSWgRDV7bM8LEveq8
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -82,7 +80,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Tue, 06 Oct 2020 17:24:27 GMT
+      - Wed, 21 Oct 2020 17:08:28 GMT
       Content-Type:
       - application/problem+json; charset=utf-8
       Content-Length:
@@ -101,6 +99,6 @@ http_interactions:
       - ASP.NET
     body:
       encoding: UTF-8
-      string: '{"type":"https://httpstatuses.com/500","title":"Internal Server Error","status":500,"traceId":"|a7474855-46274ce64d9fb4de."}'
-  recorded_at: Tue, 06 Oct 2020 17:24:27 GMT
+      string: '{"type":"https://httpstatuses.com/500","title":"Internal Server Error","status":500,"traceId":"|ca6ac1f0-467d887a86ebe8c8."}'
+  recorded_at: Wed, 21 Oct 2020 17:08:28 GMT
 recorded_with: VCR 6.0.0
