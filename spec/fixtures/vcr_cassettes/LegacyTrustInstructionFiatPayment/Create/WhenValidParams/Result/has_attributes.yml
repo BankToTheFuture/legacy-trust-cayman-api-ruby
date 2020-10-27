@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 26 Oct 2020 09:49:58 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1332'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://backoffice.smarttrust.welton.ee https://portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM3MDU3OTgsImV4cCI6MTYwMzcwOTM5OCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.IRwf92M-EeBtfJMjDIMNO8rUxHhIyquKoOtV0K3S8UAMOYeXNlNgYayXhoMFfP-qzL4IPsV4C_j8TtY2VG4wwgxo1AnOJxIs1n4_7ix7PqOmFBSkEtpO-5xWSmbap10BOJX4a7HJstEfMconfig_env[''GLOBAL_SERVICE_ACCOUNT_ID'']5cfJHH8Bg90DSluftqpsQBDzAy6faD74MH5yLmBX88xuq5LxAXawsNLvyQ8dvul8bM_AO_ZrnwwEGOqEGTJH-xm0ij_eYwr14HndW316a597SsqGBUkuHL_zZDBjs3TBf-mn2nCK3E2XoHmDdAotVJconfig_env[''GLOBAL_CLIENT_ID'']pVZepzIAwreVuZHvitgE7joGfC9v2lK-mO3FCGSZuwriCtqEiuwTsY8-AWtVTuw-pH67Tr8uWDK4JadhA0kJOUcEYcOlkGMKqDnpKlvjTNa2SeG--XbBwe4W3gNwBfMtoxkIphjQZoiSKRCX_PNs621akuNIlVXgPve7_sACTE8-pVXO8Ti7QNgojczGsOHb9SYnv5AMRo0qe-gIqHIkKBxqS6b-KMPE5YHtW_9hCn1uApcYsvxGUzaKGjiBX-KAWvDu9vPMwPH2F7_9wNT3fF13Bymo_NhkFzE02vzICJ0ZruGqmUrTy7I4WOZBXLiYPqJpl1Gr2XR76Qxs_Zmn5001tKdJKz5C7P4a2FkWWyBDY2T8wSqfBLeG9ftc3J8baWyw","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Mon, 26 Oct 2020 09:49:58 GMT
+- request:
+    method: post
+    uri: https://partner-api.smarttrust.welton.ee/instructions/payments/fiat
+    body:
+      encoding: UTF-8
+      string: '{"sourceServiceAccountId":config_env[''GLOBAL_SERVICE_ACCOUNT_ID''],"clientId":config_env[''GLOBAL_CLIENT_ID''],"targetBankAccountId":40,"amount":1000.51,"memo":"test"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Api-Version:
+      - 1.0.0
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDM3MDU3OTgsImV4cCI6MTYwMzcwOTM5OCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNtYXJ0dHJ1c3Qud2VsdG9uLmVlIiwiYXVkIjoiUGFydG5lckFwaSIsImNsaWVudF9pZCI6Imluay10ZXN0LWNsaWVudCIsImNsaWVudF9wYXJ0bmVyLmlkIjoiNyIsInNjb3BlIjpbIlBhcnRuZXJBcGkiXX0.IRwf92M-EeBtfJMjDIMNO8rUxHhIyquKoOtV0K3S8UAMOYeXNlNgYayXhoMFfP-qzL4IPsV4C_j8TtY2VG4wwgxo1AnOJxIs1n4_7ix7PqOmFBSkEtpO-5xWSmbap10BOJX4a7HJstEfMconfig_env['GLOBAL_SERVICE_ACCOUNT_ID']5cfJHH8Bg90DSluftqpsQBDzAy6faD74MH5yLmBX88xuq5LxAXawsNLvyQ8dvul8bM_AO_ZrnwwEGOqEGTJH-xm0ij_eYwr14HndW316a597SsqGBUkuHL_zZDBjs3TBf-mn2nCK3E2XoHmDdAotVJconfig_env['GLOBAL_CLIENT_ID']pVZepzIAwreVuZHvitgE7joGfC9v2lK-mO3FCGSZuwriCtqEiuwTsY8-AWtVTuw-pH67Tr8uWDK4JadhA0kJOUcEYcOlkGMKqDnpKlvjTNa2SeG--XbBwe4W3gNwBfMtoxkIphjQZoiSKRCX_PNs621akuNIlVXgPve7_sACTE8-pVXO8Ti7QNgojczGsOHb9SYnv5AMRo0qe-gIqHIkKBxqS6b-KMPE5YHtW_9hCn1uApcYsvxGUzaKGjiBX-KAWvDu9vPMwPH2F7_9wNT3fF13Bymo_NhkFzE02vzICJ0ZruGqmUrTy7I4WOZBXLiYPqJpl1Gr2XR76Qxs_Zmn5001tKdJKz5C7P4a2FkWWyBDY2T8wSqfBLeG9ftc3J8baWyw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 26 Oct 2020 09:49:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '561'
+      Connection:
+      - keep-alive
+      Location:
+      - https://partner-api.smarttrust.welton.ee/instructions/payments/fiat/124
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"sourceClientId":config_env[''GLOBAL_CLIENT_ID''],"sourceClientName":"BnkToTheFuture
+        Test Co Limited","sourceServiceEntityId":35,"sourceServiceEntityName":"Complete
+        Custody","sourceServiceAccountId":config_env[''GLOBAL_SERVICE_ACCOUNT_ID''],"sourceServiceAccountNumber":"10100000config_env[''GLOBAL_SERVICE_ACCOUNT_ID'']15","targetBankAccountOwner":"Roboexpert","targetBankAccountNumber":"27114020040000370241202935","targetBankName":"MBANK
+        S.A. (FORMERLY BRE BANK S.A.)","targetBankSwift":"BREXPLPWMBK","purposeOfPayment":null,"id":124,"dateCreated":"2020-10-26T09:49:59.0626772Z","referenceNumber":"CMP-RBSRQW","amount":1000.51,"currency":"USD","status":"Initiated"}'
+  recorded_at: Mon, 26 Oct 2020 09:49:59 GMT
+recorded_with: VCR 6.0.0
