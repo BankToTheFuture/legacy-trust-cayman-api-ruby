@@ -9,6 +9,7 @@ require 'legacy_trust/result'
 require 'legacy_trust/request_error'
 require 'legacy_trust/setup_error'
 require 'legacy_trust/third_party_bank_account'
+require 'legacy_trust/version'
 
 require 'awrence'
 require 'oauth2'
