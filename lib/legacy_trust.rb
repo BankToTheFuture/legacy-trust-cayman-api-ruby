@@ -23,10 +23,10 @@ module LegacyTrust
     # API global keys
     attr_accessor :global_client_id, :global_service_account_id
 
-    ACCESS_TOKEN_BASE_URL = 'https://auth.smarttrust.welton.ee'
+    ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
     ACCESS_TOKEN_ENDPOINT = 'connect/token'
     ACCESS_TOKEN_SCOPE = 'PartnerApi'
-    API_BASE_HOST = 'partner-api.smarttrust.welton.ee'
+    API_BASE_HOST = 'fdt-partner-api.smarttrust.welton.ee'
 
     #
     # - +method+: HTTP method; lowercase symbol, e.g. :get, :post etc.
