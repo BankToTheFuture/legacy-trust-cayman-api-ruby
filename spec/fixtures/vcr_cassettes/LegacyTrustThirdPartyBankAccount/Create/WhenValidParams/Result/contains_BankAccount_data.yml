@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://auth.smarttrust.welton.ee/connect/token
+    uri: https://fdt-auth.smarttrust.welton.ee/connect/token
     body:
       encoding: UTF-8
       string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Fri, 23 Oct 2020 07:55:32 GMT
 - request:
     method: post
-    uri: https://partner-api.smarttrust.welton.ee/3rd-party-bank-accounts
+    uri: https://fdt-partner-api.smarttrust.welton.ee/3rd-party-bank-accounts
     body:
       encoding: UTF-8
       string: '{"clientId":config_env[''GLOBAL_CLIENT_ID''],"bankId":49412,"accountHolder":"Roboexpert","accountNumber":"27114020040000370241202935","accountHolderDetail":{"addressLine1":"Zygmunta
@@ -91,7 +91,7 @@ http_interactions:
       Connection:
       - keep-alive
       Location:
-      - https://partner-api.smarttrust.welton.ee/3rd-party-bank-accounts/49
+      - https://fdt-partner-api.smarttrust.welton.ee/3rd-party-bank-accounts/49
       Server:
       - Microsoft-IIS/10.0
       X-Powered-By:

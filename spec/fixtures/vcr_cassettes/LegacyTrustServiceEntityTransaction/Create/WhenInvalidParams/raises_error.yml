@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fdt-auth.smarttrust.welton.ee/connect/token
+    body:
+      encoding: UTF-8
+      string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2020 13:24:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1333'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline' use.typekit.net
+        p.typekit.net pro.fontawesome.com;img-src 'self' https://cdn.1stdigital.com
+        data:;font-src 'self' use.typekit.net p.typekit.net pro.fontawesome.com;frame-ancestors
+        'self' https://fdt-backoffice.smarttrust.welton.ee https://fdt-portal.smarttrust.welton.ee
+        https://smarttrust.welton.ee;block-all-mixed-content
+      Feature-Policy:
+      - accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none';
+        magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDU2MTk0ODIsImV4cCI6MTYwNTYyMzA4MiwiaXNzIjoiaHR0cHM6Ly9mZHQtYXV0aC5zbWFydHRydXN0LndlbHRvbi5lZSIsImF1ZCI6IlBhcnRuZXJBcGkiLCJjbGllbnRfaWQiOiJpbmstdGVzdC1jbGllbnQiLCJjbGllbnRfcGFydG5lci5pZCI6IjciLCJzY29wZSI6WyJQYXJ0bmVyQXBpIl19.mTipFEWhmVQ6ZqNsb-sbTq73JP8mcKSDDMX0nK5YRw61IaWR14BEWAGUB8Y8uN5config_env[''GLOBAL_CLIENT_ID'']Rv9ofewhbDPoEXPRUwTzQ7eQxus-DxpQ3ol17XuH9y3CPPFRde8vkxyKurWS75uconfig_env[''GLOBAL_SERVICE_ACCOUNT_ID'']DN5LNVduxdC6qxPhjKuC6ssToHlV_E3mOb8vvH62GDNeW7OWdll1L0d2EPG5Y6d5tQ2qLuoT3wa-NQk1AwSEG-zp77nkvXLvAs1bUk7tgszfEeL-blaLfDMM5L_8kJ6esEeigEQLFr1AvPP-EsOqMFndJW0U4PULSWLLEAWHanEkpbTpx5V-cSD7slLtLHn7KAQR-Vw-6GTZcGyK6-qBVeY1AyZQejDvGmm0TQB8t86Gu4cL99TXZ1cgmsjGfZz_Qlv1k3F8u4yDmfoxUmRh67LRFRqyLL5GTXNusaJmwQr0EnSkQy9MxBTS1oG10tVZ5gTTHC4u7V99XWvH43URVOcmnvn_C5MD-hq5mH0Q4VNm6K7p3nPeVAHdvcjl6WQXue9uT5rTH88pTFDyIgW6eTpDNLUmkZDB2kFjjTE0DC0ADPZ2S5svmmdQZ079yEVY5xmTUvipYAAcK40-VSObmYC0S2zMlgQUdQ5qRfZmYKBlWuv1FUMNOoFZBmOkYrfD6asqMyLaxm4y9D9Kd96O5Y5FIWkUYDvoMBKTjRy1E","expires_in":3600,"token_type":"Bearer","scope":"PartnerApi"}'
+  recorded_at: Tue, 17 Nov 2020 13:24:42 GMT
+- request:
+    method: get
+    uri: https://fdt-partner-api.smarttrust.welton.ee/service-entities//transactions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Api-Version:
+      - 1.0.0
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5QjU1NjRGNTIwRDQ1NzZDM0U4MzdCMjM1RTk2MTZGNDdFNjUzM0QiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJlYlZXVDFJTlJYYkQ2RGV5TmVsaGIwZm1VejAifQ.eyJuYmYiOjE2MDU2MTk0ODIsImV4cCI6MTYwNTYyMzA4MiwiaXNzIjoiaHR0cHM6Ly9mZHQtYXV0aC5zbWFydHRydXN0LndlbHRvbi5lZSIsImF1ZCI6IlBhcnRuZXJBcGkiLCJjbGllbnRfaWQiOiJpbmstdGVzdC1jbGllbnQiLCJjbGllbnRfcGFydG5lci5pZCI6IjciLCJzY29wZSI6WyJQYXJ0bmVyQXBpIl19.mTipFEWhmVQ6ZqNsb-sbTq73JP8mcKSDDMX0nK5YRw61IaWR14BEWAGUB8Y8uN5config_env['GLOBAL_CLIENT_ID']Rv9ofewhbDPoEXPRUwTzQ7eQxus-DxpQ3ol17XuH9y3CPPFRde8vkxyKurWS75uconfig_env['GLOBAL_SERVICE_ACCOUNT_ID']DN5LNVduxdC6qxPhjKuC6ssToHlV_E3mOb8vvH62GDNeW7OWdll1L0d2EPG5Y6d5tQ2qLuoT3wa-NQk1AwSEG-zp77nkvXLvAs1bUk7tgszfEeL-blaLfDMM5L_8kJ6esEeigEQLFr1AvPP-EsOqMFndJW0U4PULSWLLEAWHanEkpbTpx5V-cSD7slLtLHn7KAQR-Vw-6GTZcGyK6-qBVeY1AyZQejDvGmm0TQB8t86Gu4cL99TXZ1cgmsjGfZz_Qlv1k3F8u4yDmfoxUmRh67LRFRqyLL5GTXNusaJmwQr0EnSkQy9MxBTS1oG10tVZ5gTTHC4u7V99XWvH43URVOcmnvn_C5MD-hq5mH0Q4VNm6K7p3nPeVAHdvcjl6WQXue9uT5rTH88pTFDyIgW6eTpDNLUmkZDB2kFjjTE0DC0ADPZ2S5svmmdQZ079yEVY5xmTUvipYAAcK40-VSObmYC0S2zMlgQUdQ5qRfZmYKBlWuv1FUMNOoFZBmOkYrfD6asqMyLaxm4y9D9Kd96O5Y5FIWkUYDvoMBKTjRy1E
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 17 Nov 2020 13:24:43 GMT
+      Content-Type:
+      - application/problem+json; charset=utf-8
+      Content-Length:
+      - '112'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"type":"https://httpstatuses.com/404","title":"Not Found","status":404,"traceId":"|258d6e80-4f0701867576de1d."}'
+  recorded_at: Tue, 17 Nov 2020 13:24:43 GMT
+recorded_with: VCR 6.0.0

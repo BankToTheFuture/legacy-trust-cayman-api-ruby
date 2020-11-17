@@ -12,6 +12,7 @@ LegacyTrust.oauth_client_id = config_env['OAUTH_CLIENT_ID']
 LegacyTrust.oauth_client_secret = config_env['OAUTH_CLIENT_SECRET']
 LegacyTrust.global_client_id = config_env['GLOBAL_CLIENT_ID']
 LegacyTrust.global_service_account_id = config_env['GLOBAL_SERVICE_ACCOUNT_ID']
+LegacyTrust.sandbox_mode = true
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'

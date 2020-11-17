@@ -7,6 +7,7 @@ require 'legacy_trust/instruction/fiat_deposit'
 require 'legacy_trust/instruction/fiat_payment'
 require 'legacy_trust/result'
 require 'legacy_trust/request_error'
+require 'legacy_trust/service_entity/transaction'
 require 'legacy_trust/setup_error'
 require 'legacy_trust/third_party_bank_account'
 require 'legacy_trust/version'
@@ -16,17 +17,22 @@ require 'oauth2'
 require 'plissken'
 
 # LegacyTrust API wrapper
+# rubocop:disable Metrics/ModuleLength
 module LegacyTrust
   class << self
     # OAuth authentication keys
     attr_accessor :oauth_client_id, :oauth_client_secret
     # API global keys
     attr_accessor :global_client_id, :global_service_account_id
+    # Settings
+    attr_accessor :sandbox_mode
 
-    ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
+    TEST_ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
+    TEST_API_BASE_HOST = 'fdt-partner-api.smarttrust.welton.ee'
+    LIVE_ACCESS_TOKEN_BASE_URL = 'https://auth.live.com'
+    LIVE_API_BASE_HOST = 'partner-api.live.welton.ee'
     ACCESS_TOKEN_ENDPOINT = 'connect/token'
     ACCESS_TOKEN_SCOPE = 'PartnerApi'
-    API_BASE_HOST = 'fdt-partner-api.smarttrust.welton.ee'
 
     #
     # - +method+: HTTP method; lowercase symbol, e.g. :get, :post etc.
@@ -80,19 +86,31 @@ module LegacyTrust
 
     private
 
+    def access_token_base_url
+      return TEST_ACCESS_TOKEN_BASE_URL if sandbox_mode
+
+      LIVE_ACCESS_TOKEN_BASE_URL
+    end
+
+    def api_base_host
+      return TEST_API_BASE_HOST if sandbox_mode
+
+      LIVE_API_BASE_HOST
+    end
+
     def oauth_token
       validate_setup!
       client = OAuth2::Client.new(
         oauth_client_id,
         oauth_client_secret,
-        site: ACCESS_TOKEN_BASE_URL,
+        site: access_token_base_url,
         token_url: ACCESS_TOKEN_ENDPOINT
       )
       client.client_credentials.get_token(scope: ACCESS_TOKEN_SCOPE)
     end
 
     def build_api_url(path)
-      URI::HTTPS.build(host: API_BASE_HOST, path: path)
+      URI::HTTPS.build(host: api_base_host, path: path)
     end
 
     def build_result(oauth_result)
@@ -162,3 +180,4 @@ module LegacyTrust
     end
   end
 end
+# rubocop:enable Metrics/ModuleLength

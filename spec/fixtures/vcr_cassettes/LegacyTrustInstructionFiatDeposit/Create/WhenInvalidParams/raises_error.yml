@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://auth.smarttrust.welton.ee/connect/token
+    uri: https://fdt-auth.smarttrust.welton.ee/connect/token
     body:
       encoding: UTF-8
       string: client_id=config_env['OAUTH_CLIENT_ID']&client_secret=config_env['OAUTH_CLIENT_SECRET']&grant_type=client_credentials&scope=PartnerApi
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2020 17:08:28 GMT
 - request:
     method: post
-    uri: https://partner-api.smarttrust.welton.ee/instructions/deposits/fiat
+    uri: https://fdt-partner-api.smarttrust.welton.ee/instructions/deposits/fiat
     body:
       encoding: UTF-8
       string: '{"targetServiceAccountId":config_env[''GLOBAL_SERVICE_ACCOUNT_ID''],"clientId":config_env[''GLOBAL_CLIENT_ID'']}'
