@@ -32,7 +32,7 @@ Example:
 require 'legacy_trust'
 
 LegacyTrust.oauth_client_id = 'your-client-id'
-Legacytrust.oauth_client_secret = 'your-client-secret'
+LegacyTrust.oauth_client_secret = 'your-client-secret'
 
 LegacyTrust::Currency.fetch_all(params: { currency_class: 'Fiat' })
 ```
@@ -52,6 +52,17 @@ gives the following result:
  @status=200>
 ```
 
+### Sandbox mode
+If you wish to use staging servers for testing purposes you can set `LegacyTrust.sandbox_mode` (`false` by default) as follows:
+
+```ruby
+require 'legacy_trust'
+
+LegacyTrust.sandbox_mode = true
+
+# Use any method to be executed on staging environment
+```
+
 ### Global API settings
 In case that your API integration is not based on multiple client ids or service account ids, there is an option to set up `global_client_id` and `global_service_account_id` so there is no need to attach them to each API request execution.
 
@@ -60,7 +71,7 @@ Example:
 require 'legacy_trust'
 
 LegacyTrust.global_client_id = 'your-client-id'
-Legacytrust.global_service_account_id = 'your-service-account-id'
+LegacyTrust.global_service_account_id = 'your-service-account-id'
 
 LegacyTrust::Instruction::FiatDeposit.create(body: { client_bank_account_id: 36, amount: 100.5 })
 ```

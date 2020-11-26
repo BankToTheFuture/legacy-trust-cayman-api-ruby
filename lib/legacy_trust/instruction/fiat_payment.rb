@@ -28,6 +28,19 @@ module LegacyTrust
           )
           LegacyTrust.request(:post, '/instructions/payments/fiat', opts)
         end
+
+        #
+        # GET /instructions/payments/fiat/{instruction_id}
+        #
+        # - +opts+: hash that allows to enter :params, :body and :headers
+        #
+        # Options Hash (opts):
+        #  - instruction_id (Integer)
+        #
+        def fetch(opts = {})
+          id = opts.delete(:instruction_id) || 0
+          LegacyTrust.request(:get, "/instructions/payments/fiat/#{id}", opts)
+        end
       end
     end
   end
