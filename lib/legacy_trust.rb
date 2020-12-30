@@ -25,7 +25,7 @@ module LegacyTrust
     # API global keys
     attr_accessor :global_client_id, :global_service_account_id
     # Settings
-    attr_accessor :sandbox_mode
+    attr_accessor :sandbox_mode, :proxy
 
     TEST_ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
     TEST_API_BASE_HOST = 'fdt-partner-api.smarttrust.welton.ee'
@@ -104,9 +104,14 @@ module LegacyTrust
         oauth_client_id,
         oauth_client_secret,
         site: access_token_base_url,
-        token_url: ACCESS_TOKEN_ENDPOINT
+        token_url: ACCESS_TOKEN_ENDPOINT,
+        connection_opts: client_connection_options # Faraday is initialized with it
       )
       client.client_credentials.get_token(scope: ACCESS_TOKEN_SCOPE)
+    end
+
+    def client_connection_options
+      { proxy: proxy }.compact
     end
 
     def build_api_url(path)

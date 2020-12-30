@@ -8,6 +8,7 @@
 /tmp/
 
 # Project files
+.idea
 config/config.yml
 
 # rspec failure tracking

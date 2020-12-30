@@ -76,6 +76,19 @@ LegacyTrust.global_service_account_id = 'your-service-account-id'
 LegacyTrust::Instruction::FiatDeposit.create(body: { client_bank_account_id: 36, amount: 100.5 })
 ```
 
+### Using Proxy
+If you wish to execute requests through proxy use `LegacyTrust.proxy` (`nil` by default) as follows:
+
+```ruby
+require 'legacy_trust'
+
+LegacyTrust.proxy = 'PROXY_URL'
+
+# Use any method to be executed using proxy
+```
+
+Proxy is used to perform API requests as well as fetching OAuth token.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/BankToTheFuture/legacy-trust-api-ruby.
