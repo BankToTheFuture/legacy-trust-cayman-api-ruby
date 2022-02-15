@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'legacy_trust/asset_management/account'
+require 'legacy_trust/asset_management/transaction'
 require 'legacy_trust/bank'
 require 'legacy_trust/country'
 require 'legacy_trust/currency'
@@ -11,6 +13,8 @@ require 'legacy_trust/service_entity/account'
 require 'legacy_trust/service_entity/transaction'
 require 'legacy_trust/setup_error'
 require 'legacy_trust/third_party_bank_account'
+# require 'legacy_trust/third_party_bank_account/individual'
+# require 'legacy_trust/third_party_bank_account/business'
 require 'legacy_trust/version'
 
 require 'awrence'
