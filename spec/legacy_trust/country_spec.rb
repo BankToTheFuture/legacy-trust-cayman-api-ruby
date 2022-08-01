@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-RSpec.describe LegacyTrust::Country, vcr: true do
+RSpec.describe LegacyTrustCayman::Country, vcr: true do
   describe '.fetch_all' do
     subject(:method_execution) { described_class.fetch_all }
 
     it_behaves_like 'invalid API setup'
 
     it 'returns result' do
-      expect(method_execution).to be_a(LegacyTrust::Result)
+      expect(method_execution).to be_a(LegacyTrustCayman::Result)
     end
 
     describe 'result' do

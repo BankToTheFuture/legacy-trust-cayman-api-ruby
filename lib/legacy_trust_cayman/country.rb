@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Country resource
   module Country
     class << self
@@ -8,7 +8,7 @@ module LegacyTrust
       # GET /countries
       #
       def fetch_all
-        LegacyTrust.request(:get, '/countries')
+        LegacyTrustCayman.request(:get, '/countries')
       end
     end
   end

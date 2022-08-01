@@ -1,29 +1,29 @@
 # frozen_string_literal: true
 
-require 'legacy_trust/asset_management/account'
-require 'legacy_trust/asset_management/transaction'
-require 'legacy_trust/bank'
-require 'legacy_trust/country'
-require 'legacy_trust/currency'
-require 'legacy_trust/instruction/fiat_deposit'
-require 'legacy_trust/instruction/fiat_payment'
-require 'legacy_trust/result'
-require 'legacy_trust/request_error'
-require 'legacy_trust/service_entity/account'
-require 'legacy_trust/service_entity/transaction'
-require 'legacy_trust/setup_error'
-require 'legacy_trust/third_party_bank_account'
+require 'legacy_trust_cayman/asset_management/account'
+require 'legacy_trust_cayman/asset_management/transaction'
+require 'legacy_trust_cayman/bank'
+require 'legacy_trust_cayman/country'
+require 'legacy_trust_cayman/currency'
+require 'legacy_trust_cayman/instruction/fiat_deposit'
+require 'legacy_trust_cayman/instruction/fiat_payment'
+require 'legacy_trust_cayman/result'
+require 'legacy_trust_cayman/request_error'
+require 'legacy_trust_cayman/service_entity/account'
+require 'legacy_trust_cayman/service_entity/transaction'
+require 'legacy_trust_cayman/setup_error'
+require 'legacy_trust_cayman/third_party_bank_account'
 # require 'legacy_trust/third_party_bank_account/individual'
 # require 'legacy_trust/third_party_bank_account/business'
-require 'legacy_trust/version'
+require 'legacy_trust_cayman/version'
 
 require 'awrence'
 require 'oauth2'
 require 'plissken'
 
-# LegacyTrust API wrapper
+# LegacyTrustCayman API wrapper
 # rubocop:disable Metrics/ModuleLength
-module LegacyTrust
+module LegacyTrustCayman
   class << self
     # OAuth authentication keys
     attr_accessor :oauth_client_id, :oauth_client_secret
@@ -49,7 +49,7 @@ module LegacyTrust
     #  - :body (Hash, String) - the body of the request
     #  - :headers (Hash) - http request headers
     #
-    # Raises LegacyTrust::RequestError if response code != 200
+    # Raises LegacyTrustCayman::RequestError if response code != 200
     #
     def request(method, path, opts = {})
       oauth_result = oauth_token.request(
@@ -125,7 +125,7 @@ module LegacyTrust
 
     def build_result(oauth_result)
       response_body = JSON.parse(oauth_result.body, symbolize_names: true)
-      LegacyTrust::Result.new(
+      LegacyTrustCayman::Result.new(
         status: oauth_result.status,
         body: map_response_body(response_body)
       )
@@ -134,13 +134,13 @@ module LegacyTrust
     def handle_request_error(oauth_exception)
       error_data = JSON.parse(oauth_exception.message, symbolize_names: true)
       error_data = map_response_body(error_data)
-      raise LegacyTrust::RequestError, error_data
+      raise LegacyTrustCayman::RequestError, error_data
     end
 
     def validate_setup!
       return if oauth_client_id && oauth_client_secret
 
-      raise LegacyTrust::SetupError, 'oauth_client_id or oauth_client_secret is missing'
+      raise LegacyTrustCayman::SetupError, 'oauth_client_id or oauth_client_secret is missing'
     end
 
     def map_options(opts = {})

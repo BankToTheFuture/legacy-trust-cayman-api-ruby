@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Service Entities namespace
   module AssetManagement
     # Describes Transaction resources
@@ -19,7 +19,7 @@ module LegacyTrust
         #
 
         def fetch_all(opts = {})
-          LegacyTrust.request(:get, '/ams/accounts', opts)
+          LegacyTrustCayman.request(:get, '/ams/accounts', opts)
         end
 
         #
@@ -33,7 +33,7 @@ module LegacyTrust
 
         def fetch(opts = {})
           aa_id = opts.delete(:asset_account_id)
-          LegacyTrust.request(:get, "/ams/accounts/#{aa_id}", opts)
+          LegacyTrustCayman.request(:get, "/ams/accounts/#{aa_id}", opts)
         end
       end
     end

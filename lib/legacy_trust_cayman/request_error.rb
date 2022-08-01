@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes API request error
   class RequestError < StandardError
     attr_reader :status, :trace_id, :errors, :body

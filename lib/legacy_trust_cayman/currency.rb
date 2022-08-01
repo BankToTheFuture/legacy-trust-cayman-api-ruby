@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Currency resource
   module Currency
     class << self
@@ -14,7 +14,7 @@ module LegacyTrust
       #   - :currency_class (String) [Optional]
       #
       def fetch_all(opts = {})
-        LegacyTrust.request(:get, '/currencies', opts)
+        LegacyTrustCayman.request(:get, '/currencies', opts)
       end
     end
   end

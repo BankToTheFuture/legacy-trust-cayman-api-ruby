@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Third Party Bank Account resources
   module ThirdPartyBankAccount
     class << self
@@ -26,8 +26,8 @@ module LegacyTrust
       #    - relationship (String)
       #
       def create(opts = {})
-        opts = LegacyTrust.attach_global_client_id_to_body(opts)
-        LegacyTrust.request(:post, '/3rd-party-bank-accounts', opts)
+        opts = LegacyTrustCayman.attach_global_client_id_to_body(opts)
+        LegacyTrustCayman.request(:post, '/3rd-party-bank-accounts', opts)
       end
     end
   end

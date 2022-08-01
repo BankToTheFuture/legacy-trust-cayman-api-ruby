@@ -2,22 +2,22 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'legacy_trust/version'
+require 'legacy_trust_cayman/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'legacy-trust-api'
-  spec.version       = LegacyTrust::VERSION
+  spec.name          = 'legacy-trust-cayman-api'
+  spec.version       = LegacyTrustCayman::VERSION
   spec.authors       = ['Pawel Slowik', 'Mateusz Wilczynski', 'Pawel Stracala']
   spec.email         = ['info@banktothefuture.com']
 
-  spec.summary       = 'LegacyTrust API wrapper for Ruby'
-  spec.description   = 'LegacyTrust API wrapper for Ruby'
+  spec.summary       = 'LegacyTrustCayman API wrapper for Ruby'
+  spec.description   = 'LegacyTrustCayman API wrapper for Ruby'
   spec.homepage      = 'https://bnktothefuture.com'
   spec.license       = 'MIT'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/BankToTheFuture/legacy-trust-api-ruby'
-  spec.metadata['changelog_uri'] = 'https://github.com/BankToTheFuture/legacy-trust-api-ruby/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/BankToTheFuture/legacy-trust-cayman-api-ruby'
+  spec.metadata['changelog_uri'] = 'https://github.com/BankToTheFuture/legacy-trust-cayman-api-ruby/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

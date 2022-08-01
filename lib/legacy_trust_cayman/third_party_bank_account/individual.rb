@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes ThirdPartyBankAccount namespace
   module ThirdPartyBankAccount
     # Describes Individual resources
@@ -55,8 +55,8 @@ module LegacyTrust
         #    - client_reference (String) [Optional]
 
         def create(opts = {})
-          opts = LegacyTrust.attach_global_client_id_to_body(opts)
-          LegacyTrust.request(:post, '/3rd-party-bank-accounts/individual', opts)
+          opts = LegacyTrustCayman.attach_global_client_id_to_body(opts)
+          LegacyTrustCayman.request(:post, '/3rd-party-bank-accounts/individual', opts)
         end
       end
     end

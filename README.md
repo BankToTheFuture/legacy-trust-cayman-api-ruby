@@ -1,6 +1,6 @@
-# LegacyTrust API Wrapper in Ruby
+# LegacyTrustCayman API Wrapper in Ruby
 
-This gem allows you to integrate your Ruby application with LegacyTrust API based on OAuth2.
+This gem allows you to integrate your Ruby application with LegacyTrustCayman API based on OAuth2.
 
 Read [Legacy Trust API documentation](https://partner-api.1stdigital.com/swagger/index.html) for more details.
 
@@ -25,22 +25,22 @@ Or install it yourself as:
 ## Usage
 
 ### OAuth2 authentication
-Setup OAuth2 credentials `oauth_client_id` and `oauth_client_secret` before your first use. These are mandatory to establish authentication with LegacyTrust API. In case these keys are missing or invalid, you should get `LegacyTrust::SetupError`.
+Setup OAuth2 credentials `oauth_client_id` and `oauth_client_secret` before your first use. These are mandatory to establish authentication with LegacyTrustCayman API. In case these keys are missing or invalid, you should get `LegacyTrustCayman::SetupError`.
 
 Example:
 ```ruby
 require 'legacy_trust'
 
-LegacyTrust.oauth_client_id = 'your-client-id'
-LegacyTrust.oauth_client_secret = 'your-client-secret'
+LegacyTrustCayman.oauth_client_id = 'your-client-id'
+LegacyTrustCayman.oauth_client_secret = 'your-client-secret'
 
-LegacyTrust::Currency.fetch_all(params: { currency_class: 'Fiat' })
+LegacyTrustCayman::Currency.fetch_all(params: { currency_class: 'Fiat' })
 ```
 
 gives the following result:
 
 ```
-#<LegacyTrust::Result:0x00007fa112205c50
+#<LegacyTrustCayman::Result:0x00007fa112205c50
  @body=
   [{:symbol=>"AUD", :name=>"Australian Dollar", :class=>"Fiat", :decimal_places=>2},
    {:symbol=>"CAD", :name=>"Canadian Dollar", :class=>"Fiat", :decimal_places=>2},
@@ -53,12 +53,12 @@ gives the following result:
 ```
 
 ### Sandbox mode
-If you wish to use staging servers for testing purposes you can set `LegacyTrust.sandbox_mode` (`false` by default) as follows:
+If you wish to use staging servers for testing purposes you can set `LegacyTrustCayman.sandbox_mode` (`false` by default) as follows:
 
 ```ruby
 require 'legacy_trust'
 
-LegacyTrust.sandbox_mode = true
+LegacyTrustCayman.sandbox_mode = true
 
 # Use any method to be executed on staging environment
 ```
@@ -70,19 +70,19 @@ Example:
 ```ruby
 require 'legacy_trust'
 
-LegacyTrust.global_client_id = 'your-client-id'
-LegacyTrust.global_service_account_id = 'your-service-account-id'
+LegacyTrustCayman.global_client_id = 'your-client-id'
+LegacyTrustCayman.global_service_account_id = 'your-service-account-id'
 
-LegacyTrust::Instruction::FiatDeposit.create(body: { client_bank_account_id: 36, amount: 100.5 })
+LegacyTrustCayman::Instruction::FiatDeposit.create(body: { client_bank_account_id: 36, amount: 100.5 })
 ```
 
 ### Using Proxy
-If you wish to execute requests through proxy use `LegacyTrust.proxy` (`nil` by default) as follows:
+If you wish to execute requests through proxy use `LegacyTrustCayman.proxy` (`nil` by default) as follows:
 
 ```ruby
 require 'legacy_trust'
 
-LegacyTrust.proxy = 'PROXY_URL'
+LegacyTrustCayman.proxy = 'PROXY_URL'
 
 # Use any method to be executed using proxy
 ```
