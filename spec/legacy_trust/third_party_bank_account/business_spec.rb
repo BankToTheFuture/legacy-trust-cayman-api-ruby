@@ -1,6 +1,6 @@
 # # frozen_string_literal: true
 
-# RSpec.describe LegacyTrust::ThirdPartyBankAccount::Business, vcr: true do
+# RSpec.describe LegacyTrustCayman::ThirdPartyBankAccount::Business, vcr: true do
 #   describe '.create' do
 #     subject(:method_execution) { described_class.create(**opts) }
 
@@ -10,7 +10,7 @@
 #       it_behaves_like 'invalid API setup'
 
 #       it 'raises error' do
-#         expect { method_execution }.to raise_error(LegacyTrust::RequestError)
+#         expect { method_execution }.to raise_error(LegacyTrustCayman::RequestError)
 #       end
 #     end
 
@@ -63,7 +63,7 @@
 #       it_behaves_like 'invalid API setup'
 
 #       it 'returns result' do
-#         expect(method_execution).to be_a(LegacyTrust::Result)
+#         expect(method_execution).to be_a(LegacyTrustCayman::Result)
 #       end
 
 #       describe 'result' do

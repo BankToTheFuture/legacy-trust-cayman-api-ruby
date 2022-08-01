@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes API setup error
   class SetupError < StandardError; end
 end

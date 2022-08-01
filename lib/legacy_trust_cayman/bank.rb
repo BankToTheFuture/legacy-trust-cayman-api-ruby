@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Bank resources
   module Bank
     class << self
@@ -15,7 +15,7 @@ module LegacyTrust
       #   - swift_code (String)
       #
       def fetch_all(opts = {})
-        LegacyTrust.request(:get, '/banks/search', opts)
+        LegacyTrustCayman.request(:get, '/banks/search', opts)
       end
     end
   end

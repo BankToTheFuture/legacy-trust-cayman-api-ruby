@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe LegacyTrust::Bank, vcr: true do
+RSpec.describe LegacyTrustCayman::Bank, vcr: true do
   describe '.fetch_all' do
     subject(:method_execution) { described_class.fetch_all(**opts) }
 
@@ -10,7 +10,7 @@ RSpec.describe LegacyTrust::Bank, vcr: true do
       it_behaves_like 'invalid API setup'
 
       it 'raises error' do
-        expect { method_execution }.to raise_error(LegacyTrust::RequestError)
+        expect { method_execution }.to raise_error(LegacyTrustCayman::RequestError)
       end
     end
 
@@ -20,7 +20,7 @@ RSpec.describe LegacyTrust::Bank, vcr: true do
       it_behaves_like 'invalid API setup'
 
       it 'returns result' do
-        expect(method_execution).to be_a(LegacyTrust::Result)
+        expect(method_execution).to be_a(LegacyTrustCayman::Result)
       end
 
       describe 'result' do
@@ -44,7 +44,7 @@ RSpec.describe LegacyTrust::Bank, vcr: true do
       it_behaves_like 'invalid API setup'
 
       it 'returns result' do
-        expect(method_execution).to be_a(LegacyTrust::Result)
+        expect(method_execution).to be_a(LegacyTrustCayman::Result)
       end
 
       describe 'result' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Service Entities namespace
   module ServiceEntity
     # Describes Transaction resources
@@ -20,7 +20,7 @@ module LegacyTrust
         #
         def fetch_all(opts = {})
           id = opts.delete(:service_entity_id)
-          LegacyTrust.request(:get, "/service-entities/#{id}/transactions", opts)
+          LegacyTrustCayman.request(:get, "/service-entities/#{id}/transactions", opts)
         end
       end
     end

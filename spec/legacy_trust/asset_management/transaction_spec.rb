@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe LegacyTrust::AssetManagement::Transaction, vcr: true do
+RSpec.describe LegacyTrustCayman::AssetManagement::Transaction, vcr: true do
   describe '.fetch_all' do
     subject(:method_execution) { described_class.fetch_all(**opts) }
     context 'when invalid params' do
@@ -9,12 +9,12 @@ RSpec.describe LegacyTrust::AssetManagement::Transaction, vcr: true do
       it_behaves_like 'invalid API setup'
 
       it 'raises error' do
-        expect { method_execution }.to raise_error(LegacyTrust::RequestError)
+        expect { method_execution }.to raise_error(LegacyTrustCayman::RequestError)
       end
     end
     context 'when valid params' do
       let(:account_info) do
-        LegacyTrust::AssetManagement::Account.fetch_all(params: { c_id: LegacyTrust.global_client_id } )
+        LegacyTrustCayman::AssetManagement::Account.fetch_all(params: { c_id: LegacyTrustCayman.global_client_id } )
                                              .body
                                              .first
       end
@@ -22,7 +22,7 @@ RSpec.describe LegacyTrust::AssetManagement::Transaction, vcr: true do
       let(:opts) { { params: { se_id: account_info[:service_entity_id], aa_id: account_info[:id] } } }
 
       it 'returns result' do
-        expect(method_execution).to be_a(LegacyTrust::Result)
+        expect(method_execution).to be_a(LegacyTrustCayman::Result)
       end
 
       describe 'result' do
@@ -52,12 +52,12 @@ RSpec.describe LegacyTrust::AssetManagement::Transaction, vcr: true do
       it_behaves_like 'invalid API setup'
 
       it 'raises error' do
-        expect { method_execution }.to raise_error(LegacyTrust::RequestError)
+        expect { method_execution }.to raise_error(LegacyTrustCayman::RequestError)
       end
     end
     context 'when valid params' do
       let(:account_info) do
-        LegacyTrust::AssetManagement::Account.fetch_all(params: { c_id: LegacyTrust.global_client_id } )
+        LegacyTrustCayman::AssetManagement::Account.fetch_all(params: { c_id: LegacyTrustCayman.global_client_id } )
                                              .body
                                              .first
       end
@@ -70,7 +70,7 @@ RSpec.describe LegacyTrust::AssetManagement::Transaction, vcr: true do
 
       let(:opts) { { transaction_id: transaction_id } }
       it 'returns result' do
-        expect(method_execution).to be_a(LegacyTrust::Result)
+        expect(method_execution).to be_a(LegacyTrustCayman::Result)
       end
 
       describe 'result' do

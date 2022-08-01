@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LegacyTrust
+module LegacyTrustCayman
   # Describes Instructions namespace
   module Instruction
     # Describes FiatPayment resources
@@ -22,11 +22,11 @@ module LegacyTrust
         #   - supporting_documents (Hash) [Optional]
         #
         def create(opts = {})
-          opts = LegacyTrust.attach_global_client_id_to_body(opts)
-          opts = LegacyTrust.attach_global_service_account_id_to_body(
+          opts = LegacyTrustCayman.attach_global_client_id_to_body(opts)
+          opts = LegacyTrustCayman.attach_global_service_account_id_to_body(
             :source_service_account_id, opts
           )
-          LegacyTrust.request(:post, '/instructions/payments/fiat', opts)
+          LegacyTrustCayman.request(:post, '/instructions/payments/fiat', opts)
         end
 
         #
@@ -39,7 +39,7 @@ module LegacyTrust
         #
         def fetch(opts = {})
           id = opts.delete(:instruction_id) || 0
-          LegacyTrust.request(:get, "/instructions/payments/fiat/#{id}", opts)
+          LegacyTrustCayman.request(:get, "/instructions/payments/fiat/#{id}", opts)
         end
       end
     end

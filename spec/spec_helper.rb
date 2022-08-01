@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'legacy_trust'
+require 'legacy_trust_cayman'
 require 'vcr'
 require 'pry'
 require 'support/shared_examples'
 
 # Setup OAuth2 authentication credentials - config/config.yml
 config_env = YAML.load_file(File.join(__dir__, '..', 'config', 'config.yml'))
-LegacyTrust.oauth_client_id = config_env['OAUTH_CLIENT_ID']
-LegacyTrust.oauth_client_secret = config_env['OAUTH_CLIENT_SECRET']
-LegacyTrust.global_client_id = config_env['GLOBAL_CLIENT_ID']
-LegacyTrust.global_service_account_id = config_env['GLOBAL_SERVICE_ACCOUNT_ID']
-LegacyTrust.sandbox_mode = true
+LegacyTrustCayman.oauth_client_id = config_env['OAUTH_CLIENT_ID']
+LegacyTrustCayman.oauth_client_secret = config_env['OAUTH_CLIENT_SECRET']
+LegacyTrustCayman.global_client_id = config_env['GLOBAL_CLIENT_ID']
+LegacyTrustCayman.global_service_account_id = config_env['GLOBAL_SERVICE_ACCOUNT_ID']
+LegacyTrustCayman.sandbox_mode = true
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'

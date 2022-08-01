@@ -21,9 +21,9 @@ require 'awrence'
 require 'oauth2'
 require 'plissken'
 
-# LegacyTrust API wrapper
+# LegacyTrustCayman API wrapper
 # rubocop:disable Metrics/ModuleLength
-module LegacyTrust
+module LegacyTrustCayman
   class << self
     # OAuth authentication keys
     attr_accessor :oauth_client_id, :oauth_client_secret
@@ -49,7 +49,7 @@ module LegacyTrust
     #  - :body (Hash, String) - the body of the request
     #  - :headers (Hash) - http request headers
     #
-    # Raises LegacyTrust::RequestError if response code != 200
+    # Raises LegacyTrustCayman::RequestError if response code != 200
     #
     def request(method, path, opts = {})
       oauth_result = oauth_token.request(
@@ -125,7 +125,7 @@ module LegacyTrust
 
     def build_result(oauth_result)
       response_body = JSON.parse(oauth_result.body, symbolize_names: true)
-      LegacyTrust::Result.new(
+      LegacyTrustCayman::Result.new(
         status: oauth_result.status,
         body: map_response_body(response_body)
       )
@@ -134,13 +134,13 @@ module LegacyTrust
     def handle_request_error(oauth_exception)
       error_data = JSON.parse(oauth_exception.message, symbolize_names: true)
       error_data = map_response_body(error_data)
-      raise LegacyTrust::RequestError, error_data
+      raise LegacyTrustCayman::RequestError, error_data
     end
 
     def validate_setup!
       return if oauth_client_id && oauth_client_secret
 
-      raise LegacyTrust::SetupError, 'oauth_client_id or oauth_client_secret is missing'
+      raise LegacyTrustCayman::SetupError, 'oauth_client_id or oauth_client_secret is missing'
     end
 
     def map_options(opts = {})
