@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Thu, 08 Oct 2020 11:32:21 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/banks/search
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/banks/search
     body:
       encoding: US-ASCII
       string: ''

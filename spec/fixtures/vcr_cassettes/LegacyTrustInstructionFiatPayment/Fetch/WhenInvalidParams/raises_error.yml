@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Wed, 25 Nov 2020 21:58:47 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/instructions/payments/fiat/0
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/instructions/payments/fiat/0
     body:
       encoding: US-ASCII
       string: ''

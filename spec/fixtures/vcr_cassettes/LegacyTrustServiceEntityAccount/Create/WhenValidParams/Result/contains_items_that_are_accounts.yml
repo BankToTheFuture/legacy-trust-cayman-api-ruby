@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Thu, 14 Jan 2021 17:28:15 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/service-entities/35/accounts
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/service-entities/35/accounts
     body:
       encoding: US-ASCII
       string: ''

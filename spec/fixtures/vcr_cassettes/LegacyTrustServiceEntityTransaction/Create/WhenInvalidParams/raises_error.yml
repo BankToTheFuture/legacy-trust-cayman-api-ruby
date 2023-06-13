@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Tue, 17 Nov 2020 13:24:42 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/service-entities//transactions
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/service-entities//transactions
     body:
       encoding: US-ASCII
       string: ''
