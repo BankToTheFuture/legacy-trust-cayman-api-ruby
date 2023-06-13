@@ -4,7 +4,7 @@ This gem allows you to integrate your Ruby application with LegacyTrustCayman AP
 
 Read [Legacy Trust API documentation](https://partner-api.1stdigital.com/swagger/index.html) for more details.
 
-If you can't find something in their official documentation then check their [staging documentation](https://fdt-partner-api.smarttrust.welton.ee/swagger/index.html?url=/swagger/partner-api/swagger.json). Perhaps your are looking for stuff that has not been released yet.
+If you can't find something in their official documentation then check their [staging documentation](https://partner-api-aggregator-dev.k8s.smarttrust.app/swagger/index.html?url=/swagger/partner-api/swagger.json). Perhaps your are looking for stuff that has not been released yet.
 
 ## Installation
 

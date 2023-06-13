@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Tue, 17 Nov 2020 13:24:44 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/service-entities/35/transactions?saId=config_env['GLOBAL_SERVICE_ACCOUNT_ID']
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/service-entities/35/transactions?saId=config_env['GLOBAL_SERVICE_ACCOUNT_ID']
     body:
       encoding: US-ASCII
       string: ''

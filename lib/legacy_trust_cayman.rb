@@ -33,7 +33,7 @@ module LegacyTrustCayman
     attr_accessor :sandbox_mode, :proxy
 
     TEST_ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
-    TEST_API_BASE_HOST = 'fdt-partner-api.smarttrust.welton.ee'
+    TEST_API_BASE_HOST = 'partner-api-aggregator-dev.k8s.smarttrust.app'
     LIVE_ACCESS_TOKEN_BASE_URL = 'https://auth.1stdigital.com'
     LIVE_API_BASE_HOST = 'partner-api.1stdigital.com'
     ACCESS_TOKEN_ENDPOINT = 'connect/token'

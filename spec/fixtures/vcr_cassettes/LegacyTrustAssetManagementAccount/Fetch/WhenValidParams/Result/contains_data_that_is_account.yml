@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Mon, 14 Feb 2022 12:47:37 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/ams/accounts?cId=config_env['GLOBAL_CLIENT_ID']
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/ams/accounts?cId=config_env['GLOBAL_CLIENT_ID']
     body:
       encoding: US-ASCII
       string: ''
@@ -159,7 +159,7 @@ http_interactions:
   recorded_at: Mon, 14 Feb 2022 12:47:37 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/ams/accounts/2366
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/ams/accounts/2366
     body:
       encoding: US-ASCII
       string: ''

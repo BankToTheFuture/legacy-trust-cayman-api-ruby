@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Thu, 08 Oct 2020 16:17:18 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/countries
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/countries
     body:
       encoding: US-ASCII
       string: ''

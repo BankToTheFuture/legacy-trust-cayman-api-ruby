@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Fri, 25 Sep 2020 16:59:23 GMT
 - request:
     method: get
-    uri: https://fdt-partner-api.smarttrust.welton.ee/currencies?currencyClass=Fiat
+    uri: https://partner-api-aggregator-dev.k8s.smarttrust.app/currencies?currencyClass=Fiat
     body:
       encoding: US-ASCII
       string: ''
