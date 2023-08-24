@@ -31,13 +31,12 @@ module LegacyTrustCayman
     attr_accessor :global_client_id, :global_service_account_id
     # Settings
     attr_accessor :sandbox_mode, :proxy
-
-    TEST_ACCESS_TOKEN_BASE_URL = 'https://fdt-auth.smarttrust.welton.ee'
-    TEST_API_BASE_HOST = 'partner-api-aggregator-dev.k8s.smarttrust.app'
-    LIVE_ACCESS_TOKEN_BASE_URL = 'https://auth.1stdigital.com'
-    LIVE_API_BASE_HOST = 'partner-api.1stdigital.com'
-    ACCESS_TOKEN_ENDPOINT = 'connect/token'
-    ACCESS_TOKEN_SCOPE = 'PartnerApi'
+    # Test
+    attr_accessor :test_access_token_base_url, :test_api_base_host
+    # Live
+    attr_accessor :live_access_token_base_url, :live_api_base_host
+    # Access Token
+    attr_accessor :access_token_endpoint, :access_token_scope
 
     #
     # - +method+: HTTP method; lowercase symbol, e.g. :get, :post etc.
@@ -92,15 +91,15 @@ module LegacyTrustCayman
     private
 
     def access_token_base_url
-      return TEST_ACCESS_TOKEN_BASE_URL if sandbox_mode
+      return test_access_token_base_url if sandbox_mode
 
-      LIVE_ACCESS_TOKEN_BASE_URL
+      live_access_token_base_url
     end
 
     def api_base_host
-      return TEST_API_BASE_HOST if sandbox_mode
+      return test_api_base_host if sandbox_mode
 
-      LIVE_API_BASE_HOST
+      live_api_base_host
     end
 
     def oauth_token
@@ -109,10 +108,10 @@ module LegacyTrustCayman
         oauth_client_id,
         oauth_client_secret,
         site: access_token_base_url,
-        token_url: ACCESS_TOKEN_ENDPOINT,
+        token_url: access_token_endpoint,
         connection_opts: client_connection_options # Faraday is initialized with it
       )
-      client.client_credentials.get_token(scope: ACCESS_TOKEN_SCOPE)
+      client.client_credentials.get_token(scope: access_token_scope)
     end
 
     def client_connection_options
