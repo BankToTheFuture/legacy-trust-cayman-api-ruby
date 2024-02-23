@@ -13,3 +13,5 @@ config/config.yml
 
 # rspec failure tracking
 .rspec_status
+
+.ruby-version
