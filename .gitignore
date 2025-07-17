@@ -15,3 +15,5 @@ config/config.yml
 .rspec_status
 
 .ruby-version
+
+.vscode
