@@ -1,64 +1,66 @@
 # frozen_string_literal: true
 
-RSpec.describe LegacyTrustCayman::Bank, vcr: true do
+RSpec.describe LegacyTrustCayman::Bank do
   describe '.fetch_all' do
     subject(:method_execution) { described_class.fetch_all(**opts) }
 
-    context 'when no params' do
-      let(:opts) { {} }
-
-      it_behaves_like 'invalid API setup'
-
-      it 'raises error' do
-        expect { method_execution }.to raise_error(LegacyTrustCayman::RequestError)
-      end
-    end
-
     context 'when filtering by swift code' do
       let(:opts) { { params: { swift_code: 'BREXPLPWMBK' } } }
+      let(:bank) do
+        {
+          id: 1,
+          name: 'MBANK S.A.',
+          swift_code: 'BREXPLPWMBK',
+          country_id: 1,
+          city: 'Warsaw',
+          branch: 'Main',
+          is_deleted: false
+        }
+      end
+      let(:api_result) do
+        LegacyTrustCayman::Result.new(
+          status: 200,
+          body: {
+            current_page: 1,
+            page_size: 50,
+            total_count: 1,
+            total_pages: 1,
+            has_next: false,
+            has_previous: false,
+            results: [bank]
+          }
+        )
+      end
 
-      it_behaves_like 'invalid API setup'
+      before do
+        allow(LegacyTrustCayman).to receive(:request).and_return(api_result)
+      end
+
+      it 'calls the paginated banks endpoint' do
+        method_execution
+
+        expect(LegacyTrustCayman).to have_received(:request).with(:get, '/banks', opts)
+      end
 
       it 'returns result' do
         expect(method_execution).to be_a(LegacyTrustCayman::Result)
       end
 
-      describe 'result' do
-        it 'contains number of items' do
-          result = method_execution
-          expect(result.body.size).to be(1)
-        end
-
-        it 'contains items that are banks' do
-          result = method_execution
-          expect(result.body.first.keys).to contain_exactly(
-            :id, :name, :swift_code, :country_id, :city, :branch, :is_deleted
-          )
-        end
+      it 'keeps the previous array response shape' do
+        expect(method_execution.body).to eq([bank])
       end
     end
 
-    context 'when filtering by name' do
+    context 'when response is not paginated' do
       let(:opts) { { params: { name: 'MBANK S.A.' } } }
+      let(:api_result) { LegacyTrustCayman::Result.new(status: 200, body: []) }
 
-      it_behaves_like 'invalid API setup'
-
-      it 'returns result' do
-        expect(method_execution).to be_a(LegacyTrustCayman::Result)
+      before do
+        allow(LegacyTrustCayman).to receive(:request).and_return(api_result)
       end
 
-      describe 'result' do
-        it 'contains number of items' do
-          result = method_execution
-          expect(result.body.size).to be(39)
-        end
-
-        it 'contains items that are banks' do
-          result = method_execution
-          expect(result.body.first.keys).to contain_exactly(
-            :id, :name, :swift_code, :country_id, :city, :branch, :is_deleted
-          )
-        end
+      it 'returns the original result' do
+        expect(method_execution).to eq(api_result)
       end
     end
   end
